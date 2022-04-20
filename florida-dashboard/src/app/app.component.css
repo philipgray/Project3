@@ -1,0 +1,6 @@
+
+/* Make navigation bar stay on top of screen */
+app-navigation-bar {
+  position: sticky;
+  top: 5px
+}
