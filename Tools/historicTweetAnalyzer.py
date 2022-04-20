@@ -53,34 +53,9 @@ class TweetAnalyzer:
                 # Also date[0:4] should be the year, which is a digit
                 if (len(date) == 10 and (date[0:4].isdigit())):
                     self.countTweetByMonth(date)
-                
-
-
-
-
-        # # Read every line in the file
-        # for line in csvFile:
-            
-        #     # Ignore the header line, which begins with 'id_str'
-        #     # NOTE: If using a different CSV, you must change this code to ensure the header line is ignored
-        #     print('new line: ' + line)
-        #     if (line.strip != ""):
-
-        #         # If the first characters are not a tweet ID, this is not the beginning of a new Tweet
-        #         # (Could be the header line, or an accidental line made from breaking the line due to Tweet content)
-        #         # Tweet IDs have at least 15 digits
-        #         if (line[0] == '\"') and (line[1] != 'i'):  
-
-        #             # Split the line into each column of the csv
-        #             tweet = line.split(',')
-
-        #             # tweet[1] contains the date of the tweet
-        #             date = tweet[1]
-        #             self.countTweetByMonth(date)
-
-
-
-        csvFile.close()
+                    
+        # End of with
+        # note: the 'with' statement closes the file automatically
 
     def countTweetByMonth(self, date: str):
         ''' Increments the frequency value in the dictionary to count a tweet based on its month. 
