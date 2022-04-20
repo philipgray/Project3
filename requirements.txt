@@ -1,0 +1,4 @@
+pymongo~=4.1.1
+spotipy~=2.19.0
+requests~=2.27.1
+python-dateutil~=2.8.2
