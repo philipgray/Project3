@@ -14,6 +14,9 @@ import { Component } from '@angular/core';
 	<div class="container">
     <!-- This anchor is just a reference to the top of the page -->
     
+	<!-- Subcontainer div! Do not remove. -->
+	<div>
+	
 	<div class="title">
 	<p>Red Tide</p>
 	</div>
@@ -50,19 +53,37 @@ import { Component } from '@angular/core';
 	</div>
 	
 	</div>
+	
+	<!-- Subcontainer div end -->
+	</div>
 
     <!-- Put youtube content right under this anchor -->
-    <a id = 'youtube'></a>
+    
 	
+	<div class="youtube">
+	
+	<div class="mini-title">
+	<p>
+	Youtube Videos:
+	</p>
 	</div>
-	<div>
+	<a id = 'youtube'></a>
     <app-youtube-panel></app-youtube-panel>
-	</div>
 	
     <!-- Put spotify content right under this anchor -->
     
 	</div>
 	
+	<div class="youtube">
+	
+	<div class="mini-title">
+	<p>
+	Chatboard:
+	</p>
+	</div>
+	</div>
+	
+	</div>
 	</div>
 	
 	
