@@ -2,7 +2,7 @@ import configparser
 from dateutil import parser
 import requests
 
-from Tools.dbBuddy import RedTideDB
+from Tools.RedTideDB import RedTideDB
 
 config = configparser.ConfigParser()
 config.read('config.ini')

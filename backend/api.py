@@ -1,19 +1,19 @@
+import configparser
 import flask
-from flask import request, jsonify
+from flask import request, jsonify, g
+from flask_pymongo import PyMongo
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+mdb = config['mongoDB']
+
+# establish the "connection string" that we use to connect to the db with.
+cs = f"mongodb+srv://{mdb['username']}:{mdb['pw']}@{mdb['server']}/redtideDB"
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-
-testTweets = [
-    {
-        'id': 0,
-        'tweet': 'yoooooooooooooooooooooooooo whats up red tide sucks :('
-    },
-    {
-        'id': 1,
-        'tweet': 'yo dawg i really hate red tide wtf up who did that'
-    }
-]
+app.config["MONGO_URI"] = cs
+mongo = PyMongo(app)
 
 
 @app.route('/')
@@ -23,9 +23,14 @@ def home():
 
 @app.route('/api/v1/redtide/tweets/all', methods=['GET'])
 def api_all_tweets():
-    return jsonify(testTweets)
+    test = mongo.db.tweets.find().sort([('_id', -1)]).limit(5)
+    t = []
+    for doc in test:
+        t.append(doc)
+    return jsonify(t)
 
 
+"""
 @app.route('/api/v1/redtide/tweets', methods=['GET'])
 def api_id():
     if 'id' in request.args:
@@ -43,11 +48,11 @@ def api_id():
             return jsonify(results)
     else:
         return "Error: No ID field provided. Please specify an ID.", 400
-
+"""
 
 @app.route('/api/v1/redtide/historical/month', methods=['GET'])
-def api_all_tweets():
-    return jsonify(testTweets)
+def api_last_month():
+    return "hi this doesn't work yet :)"
 
 
 # run the server

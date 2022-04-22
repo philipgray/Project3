@@ -39,6 +39,10 @@ class RedTideDB:
         db = self.client.redtideDB
         db.tweets.insert_many(multiple_tweets)
 
+
+    def getTweets(self, limit: int):
+        return
+
     def close(self):
         self.client.close()
         print("Database connection closed.")
