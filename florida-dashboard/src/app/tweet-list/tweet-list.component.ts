@@ -4,13 +4,17 @@ import { Tweet } from '../interfaces/tweet';
 @Component({
   selector: 'app-tweet-list',
   template: `
+  <div class="twittercontainer">
+  <div class="title">
     <p>
       Recent Tweets:
     </p>
+	</div>
 
     <app-tweet *ngFor='let tweet of tweets'
       [tweet]='tweet'>
     </app-tweet>
+	</div>
   `,
   styleUrls: ['./tweet-list.component.css']
 })

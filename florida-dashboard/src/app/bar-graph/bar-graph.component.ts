@@ -8,7 +8,7 @@ import { ChartType } from 'angular-google-charts';
 @Component({
   selector: 'app-bar-graph',
   template: `
-
+	<div class="div">
     <!-- Uses google chart wrapper -->
     <google-chart #chart
       title="Tweets over time"
@@ -16,6 +16,7 @@ import { ChartType } from 'angular-google-charts';
       [data]="this.tweetFrequency"
 
       ></google-chart>
+	  </div>
   `,
   styleUrls: ['./bar-graph.component.css']
 })
