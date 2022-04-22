@@ -10,8 +10,10 @@
 #   Reading CSV file: https://docs.python.org/3/library/csv.html
 #   Using 'with' keyword to simplify file streams: https://www.educative.io/edpresso/the-with-statement-in-python
 #   Using dictionaries in python: https://www.w3schools.com/python/python_dictionaries.asp
+#   Python json package: https://docs.python.org/3/library/json.html
 
 import csv
+import json
 
 class TweetAnalyzer:
     ''' Gathers, analyzes, and stores frequency information about Tweets. 
@@ -102,7 +104,9 @@ class TweetAnalyzer:
         else:
             return self.frequencyDictionary[key]
     
-
+    def writeJson(self) -> str:
+        ''' Converts the frequency dictionary into a json string '''
+        return json.dumps(self.frequencyDictionary, sort_keys = True, indent = 2)
 
 def testTweetAnalyzer():
     ''' Tests the tweet analysis class and its methods. '''
@@ -128,6 +132,8 @@ def testTweetAnalyzer():
     for year in range(2016, 2020):
         for month in range(1, 13):
             print('Month: ' + str(month) + '/' + str(year) + ': ' + str(analyzer.getFrequency(month, year)) + ' tweets')
+
+    print( json.dumps(dictionary, sort_keys = True, indent=4))
 
 def main():
     """"""
