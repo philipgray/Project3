@@ -2,6 +2,7 @@ import configparser
 import flask
 from flask import request, jsonify, g
 from flask_pymongo import PyMongo
+from flask_cors import CORS, cross_origin
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -11,6 +12,8 @@ mdb = config['mongoDB']
 cs = f"mongodb+srv://{mdb['username']}:{mdb['pw']}@{mdb['server']}/redtideDB"
 
 app = flask.Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.config["DEBUG"] = True
 app.config["MONGO_URI"] = cs
 mongo = PyMongo(app)
@@ -22,6 +25,7 @@ def home():
 
 
 @app.route('/api/v1/redtide/tweets/all', methods=['GET'])
+@cross_origin()
 def api_all_tweets():
     test = mongo.db.tweets.find().sort([('_id', -1)]).limit(5)
     t = []
