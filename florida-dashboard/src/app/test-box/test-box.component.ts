@@ -24,7 +24,11 @@ export class TestBoxComponent implements OnInit {
   constructor(private database: DatabaseApiService) { }
 
   ngOnInit(): void {
-    this.testShowDataFetch();
+    this.database.testNewApi()
+    .then( (response) => (response.json()))
+    .then( (json) => {
+      this.body = json[0].text;
+    });
   }
 
   testShowData(){

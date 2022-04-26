@@ -46,3 +46,7 @@ class RedTideDB:
     def close(self):
         self.client.close()
         print("Database connection closed.")
+
+    def addHistoricalData(self, data: dict):
+        db = self.client.redtideDB
+        db.tweetHistory.insert_one(data)

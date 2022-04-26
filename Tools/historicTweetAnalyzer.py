@@ -14,6 +14,7 @@
 
 import csv
 import json
+import RedTideDB
 
 class TweetAnalyzer:
     ''' Gathers, analyzes, and stores frequency information about Tweets. 
@@ -104,9 +105,25 @@ class TweetAnalyzer:
         else:
             return self.frequencyDictionary[key]
     
-    def writeJson(self) -> str:
+    def writeJson(self) -> dict:
         ''' Converts the frequency dictionary into a json string '''
-        return json.dumps(self.frequencyDictionary, sort_keys = True, indent = 2)
+        # return json.dumps(self.frequencyDictionary, sort_keys = True, indent = 2)
+        # frequencyData = []
+        # for key in self.frequencyDictionary:
+        #     frequencyData.append([key, self.frequencyDictionary[key]])
+        
+        # jsonDict = {'data': frequencyData}
+
+
+
+        jsonDict = self.frequencyDictionary
+        print("DICTIONARIY: ", jsonDict)
+        return jsonDict
+
+    def addJsonToDatabase(self):
+        database = RedTideDB.RedTideDB()
+        database.addHistoricalData(self.writeJson)
+        database.close()
 
 def testTweetAnalyzer():
     ''' Tests the tweet analysis class and its methods. '''
@@ -133,11 +150,13 @@ def testTweetAnalyzer():
         for month in range(1, 13):
             print('Month: ' + str(month) + '/' + str(year) + ': ' + str(analyzer.getFrequency(month, year)) + ' tweets')
 
-    print( json.dumps(dictionary, sort_keys = True, indent=4))
+    print( analyzer.writeJson() )
+
+    analyzer.addJsonToDatabase()
 
 def main():
     """"""
     testTweetAnalyzer()
 
 if __name__ == '__main__':
-    main();
+    main()
