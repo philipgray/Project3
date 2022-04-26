@@ -12,7 +12,7 @@ bearer_token = config['twitter']['bearer']
 search_url = "https://api.twitter.com/2/tweets/search/recent"
 query_params = {
     'query': 'red tide -is:retweet -is:quote -roll -is:reply',
-    'tweet.fields': 'created_at',
+    'tweet.fields': 'created_at ,public_metrics',
     'max_results': 10,
     'expansions': 'author_id'
 }
@@ -51,11 +51,15 @@ def main():
             'created_at': date,
             'link': f"https://www.twitter.com/twitter/status/{data['id']}"
         }
+
+        data['id']
+
         res.append(tweet)
 
     redtideDB = RedTideDB()
     redtideDB.addTweets(res)
     redtideDB.close()
+
 
 if __name__ == main():
     main()
