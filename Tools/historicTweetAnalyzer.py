@@ -108,21 +108,21 @@ class TweetAnalyzer:
     def writeJson(self) -> dict:
         ''' Converts the frequency dictionary into a json string '''
         # return json.dumps(self.frequencyDictionary, sort_keys = True, indent = 2)
-        # frequencyData = []
-        # for key in self.frequencyDictionary:
-        #     frequencyData.append([key, self.frequencyDictionary[key]])
+
+        frequencyData = []
+        for key in self.frequencyDictionary:
+            frequencyData.append([key, self.frequencyDictionary[key]])
         
-        # jsonDict = {'data': frequencyData}
+        jsonDict = {'data': frequencyData}
 
 
-
-        jsonDict = self.frequencyDictionary
+        # jsonDict = self.frequencyDictionary
         print("DICTIONARIY: ", jsonDict)
         return jsonDict
 
     def addJsonToDatabase(self):
         database = RedTideDB.RedTideDB()
-        database.addHistoricalData(self.writeJson)
+        database.addHistoricalData(self.writeJson())
         database.close()
 
 def testTweetAnalyzer():

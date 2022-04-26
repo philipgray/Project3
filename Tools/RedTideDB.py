@@ -1,5 +1,6 @@
 import configparser
 from pymongo import MongoClient
+import certifi
 
 
 class RedTideDB:
@@ -9,13 +10,16 @@ class RedTideDB:
     # https://www.mongodb.com/docs/manual/reference/connection-string/
     def __init__(self):
         self.db = None
+        
+        ca = certifi.where()
+
         config = configparser.ConfigParser()
         config.read('config.ini')
         mdb = config['mongoDB']
 
         # establish the "connection string" that we use to connect to the db with.
         cs = f"mongodb+srv://{mdb['username']}:{mdb['pw']}@{mdb['server']}/"
-        self.client = MongoClient(cs)
+        self.client = MongoClient(cs, tlsCAFile=ca)
 
         print("Opened database connection.")
 
