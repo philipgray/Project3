@@ -40,8 +40,10 @@ class RedTideDB:
         db.tweets.insert_many(multiple_tweets)
 
 
-    def getTweets(self, limit: int):
-        return
+
+    def addHistoricalData(self, data: dict):
+        db = self.client.redtideDB
+        db.tweetHistory.insert_one(data)
 
     def close(self):
         self.client.close()
