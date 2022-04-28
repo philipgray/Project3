@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def home():
-    return "hello"
+    return "welcome"
 
 
 @app.route('/api/v1/redtide/tweets/all', methods=['GET'])
@@ -50,9 +50,9 @@ def api_tweets():
     """
     if 'limit' in request.args:
         try:
-            tweets = mongo.db.tweets.find().sort([('_id', -1)]).limit(request.args['limit'])
+            tweets = mongo.db.tweets.find().sort([('_id', -1)]).limit(int(request.args['limit']))
         except ValueError:
-            raise ValueError(f"Not a valid ID.")
+            return ValueError(f"Invalid Limit"), 400
 
         else:
             results = []
@@ -62,6 +62,7 @@ def api_tweets():
             return jsonify(results)
     else:
         return "Error: No limit provided. Please specify a limit.", 400
+
 
 @app.route('/api/v1/redtide/historical/month', methods=['GET'])
 def api_last_month():

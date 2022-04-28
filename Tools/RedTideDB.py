@@ -6,6 +6,7 @@ class RedTideDB:
     """
     hi alex and ferris
     """
+
     # https://www.mongodb.com/docs/manual/reference/connection-string/
     def __init__(self):
         self.db = None
@@ -38,8 +39,6 @@ class RedTideDB:
         """
         db = self.client.redtideDB
         db.tweets.insert_many(multiple_tweets)
-
-
 
     def addHistoricalData(self, data: dict):
         db = self.client.redtideDB

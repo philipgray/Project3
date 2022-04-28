@@ -26,7 +26,6 @@ class TwitterScraper:
 
     def get_tweets(self, query_params):
         response = self.connect_to_endpoint(self.search_url, query_params)
-        print(response)
         results = []
 
         for data in response['data']:
