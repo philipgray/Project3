@@ -15,6 +15,7 @@ import { BarGraphComponent } from './bar-graph/bar-graph.component';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TweetComponent } from './tweet/tweet.component';
 import { ChatboardComponent } from './chatboard/chatboard.component';
+import { ChatboardMessageComponent } from './chatboard-message/chatboard-message.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ChatboardComponent } from './chatboard/chatboard.component';
     TweetListComponent,
     TweetComponent,
     ChatboardComponent,
+    ChatboardMessageComponent,
   ],
   imports: [
     BrowserModule,
