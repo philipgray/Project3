@@ -26,8 +26,6 @@ export class TweetComponent implements OnInit {
       'created_at': '0',
       'link': '',
       'text': 'ERROR: Tweet not found.',
-      'likes': 0,
-      'retweets': 0
       }
   }
 

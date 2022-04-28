@@ -29,5 +29,5 @@ if __name__ == '__main__':
         'expansions': 'author_id'
     }
 
-    getTweets(db, ts, q1)
+    # getTweets(db, ts, q1)
     db.close()
