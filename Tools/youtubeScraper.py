@@ -33,34 +33,41 @@ class YoutubeScraper:
             channelId = channelID,
             maxResults = videoQuantity,
             q = query,
-            type = 'video'
+            type = 'video',
             videoEmbeddable = 'true'
         )
+
+        # Carry out the request and return it
+        return request.execute()
 
 
 
 def main():
     
 
-    config = configparser.ConfigParser()
-    config.read('config.ini')
-    DEVELOPER_KEY = config['youtube']['api_key']
+    # config = configparser.ConfigParser()
+    # config.read('config.ini')
+    # DEVELOPER_KEY = config['youtube']['api_key']
 
-    api_service_name = "youtube"
-    api_version = "v3"
+    # api_service_name = "youtube"
+    # api_version = "v3"
 
-    youtube = googleapiclient.discovery.build(
-        api_service_name, api_version, developerKey = DEVELOPER_KEY)
+    # youtube = googleapiclient.discovery.build(
+    #     api_service_name, api_version, developerKey = DEVELOPER_KEY)
 
-    request = youtube.search().list(
-        part="snippet",
-        channelId="UC0Tvo7Chnyvgliwrmiqosbg",
-        maxResults=2,
-        q="red tide"
-    )
-    response = request.execute()
+    # request = youtube.search().list(
+    #     part="snippet",
+    #     channelId="UC0Tvo7Chnyvgliwrmiqosbg",
+    #     maxResults=2,
+    #     q="red tide"
+    # )
+    # response = request.execute()
 
-    print(response)
+    # print(response)
+
+
+    scraper = YoutubeScraper()
+    print (scraper.searchForVideo(1, 'red tide'))
 
 if __name__ == "__main__":
     main()
