@@ -11,6 +11,7 @@ import { DatabaseApiService } from '../services/database-api.service';
     <p>
       Test data:
       {{body}}
+      {{link}}
     </p>
   `,
   styleUrls: ['./test-box.component.css']
@@ -20,6 +21,7 @@ export class TestBoxComponent implements OnInit {
   data: string = '';
   headers: string[] = [];
   body: any;
+  link: any;
 
   constructor(private database: DatabaseApiService) { }
 
@@ -28,6 +30,7 @@ export class TestBoxComponent implements OnInit {
     .then( (response) => (response.json()))
     .then( (json) => {
       this.body = json[0].text;
+      this.link = json[0].link;
     });
   }
 

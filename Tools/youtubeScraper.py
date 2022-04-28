@@ -13,7 +13,9 @@ import configparser
 class YoutubeScraper:
     ''' Class to hold general information and methods to do API calls with youtube '''
 
-    moteChannelId = 'UC0Tvo7Chnyvgliwrmiqosbg'
+    # Channel IDs
+    MOTE_ID = 'UC0Tvo7Chnyvgliwrmiqosbg'
+    SARASOTA_MEMORIAL_ID = 'UCGBD7uXRwp_lb2Mpu2XupBQ'
 
     def __init__(self):
         # Get developer key from config file
@@ -40,34 +42,29 @@ class YoutubeScraper:
         # Carry out the request and return it
         return request.execute()
 
+    def searchRelevantMoteVideo(self, query: str = 'red tide'):
+        ''' Searches the Mote Marine youtube channel for a video and returns the video in youtube's json format 
+        RETURN - json dictionary containing all information about the video, including its ID
+        NOTE - to get the video id, take the output of this function, and index ['id']['videoId'] '''
+        
+        response = self.searchForVideo(1, query, YoutubeScraper.MOTE_ID)
+        
+        return response['items'][0]
 
+    def searchRelevantMedicalVideo(self, query: str = 'red tide symptoms'):
+        ''' Searches the SMHCS youtube channel for a video and returns the video in youtube's json format 
+        RETURN - json dictionary containing all information about the video, including its ID
+        NOTE - to get the video id, take the output of this function, and index ['id']['videoId'] '''
+        
+        response = self.searchForVideo(1, query, YoutubeScraper.SARASOTA_MEMORIAL_ID)
+        
+        return response['items'][0]
 
 def main():
     
-
-    # config = configparser.ConfigParser()
-    # config.read('config.ini')
-    # DEVELOPER_KEY = config['youtube']['api_key']
-
-    # api_service_name = "youtube"
-    # api_version = "v3"
-
-    # youtube = googleapiclient.discovery.build(
-    #     api_service_name, api_version, developerKey = DEVELOPER_KEY)
-
-    # request = youtube.search().list(
-    #     part="snippet",
-    #     channelId="UC0Tvo7Chnyvgliwrmiqosbg",
-    #     maxResults=2,
-    #     q="red tide"
-    # )
-    # response = request.execute()
-
-    # print(response)
-
-
     scraper = YoutubeScraper()
-    print (scraper.searchForVideo(1, 'red tide'))
+    print(scraper.searchRelevantMoteVideo()['id']['videoId'])
+    print(scraper.searchRelevantMedicalVideo()['id']['videoId'])
 
 if __name__ == "__main__":
     main()
