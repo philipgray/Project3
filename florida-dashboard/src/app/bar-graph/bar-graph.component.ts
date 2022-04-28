@@ -25,18 +25,15 @@ export class BarGraphComponent implements OnInit {
 
   chartType = ChartType.ColumnChart;
 
-  tweetFrequency = [
-    ["June 2017", 30],
-    ["July 2017", 40],
-    ["August 2017", 49],
-    ["September 2017", 17],
-    ["October 2017", 11]
-  ]
+  tweetFrequency = []
 
   constructor(private database: DatabaseApiService) { }
 
   ngOnInit(): void {
-    this.tweetFrequency = this.database.getHistoricalData();
+    this.database.getHistoricalTwitterData().then((response) => response.json())
+    .then((data) => {
+      this.tweetFrequency = data;
+    });
   }
 
 }

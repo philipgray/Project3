@@ -152,7 +152,7 @@ def testTweetAnalyzer():
 
     print( analyzer.writeJson() )
 
-    analyzer.addJsonToDatabase()
+    # analyzer.addJsonToDatabase()
 
 def main():
     """"""

@@ -31,25 +31,12 @@ export class TestBoxComponent implements OnInit {
     });
   }
 
-  testShowData(){
-    this.database.testGetData().subscribe(resp => {
-      // Display headers
-      const keys = resp.headers.keys();
-      this.headers = keys.map(key =>
-        `${key}: ${resp.headers.get(key)}`);
-
-        this.body = {... resp.body!};
-    });
-
-
-  }
-
   getData(resp: HttpResponse<any>){
     this.data = resp.body.body;
   }
 
   testShowDataFetch(){
-    this.database.testFetchGetData()
+    this.database.testNewApi()
       .then(
       // Promise fulfilled, data delivered
         (value: any) => {

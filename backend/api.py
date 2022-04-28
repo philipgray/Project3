@@ -2,6 +2,9 @@ import configparser
 import flask
 from flask import request, jsonify, g
 from flask_pymongo import PyMongo
+# CORS solution from: https://flask-cors.readthedocs.io/en/latest/
+from flask_cors import CORS, cross_origin
+import certifi
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -11,9 +14,12 @@ mdb = config['mongoDB']
 cs = f"mongodb+srv://{mdb['username']}:{mdb['pw']}@{mdb['server']}/redtideDB"
 
 app = flask.Flask(__name__)
+# Allow CORS - for these calls to be accessed from any browser
+CORS(app)
 app.config["DEBUG"] = True
 app.config["MONGO_URI"] = cs
-mongo = PyMongo(app)
+ca = certifi.where()
+mongo = PyMongo(app, tlsCAFile=ca)
 
 
 @app.route('/')
@@ -29,6 +35,12 @@ def api_all_tweets():
         t.append(doc)
     return jsonify(t)
 
+@app.route('/api/v1/redtide/tweets/history/frequency', methods=['GET'])
+def api_historical_tweet_frequency():
+    tweetHistory = mongo.db.tweetHistory.find_one()
+    response = jsonify(tweetHistory['data'])
+    # response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 
 """
 @app.route('/api/v1/redtide/tweets', methods=['GET'])

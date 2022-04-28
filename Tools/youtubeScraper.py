@@ -8,14 +8,46 @@ import os
 
 import googleapiclient.discovery
 
+import configparser
+
+class YoutubeScraper:
+    ''' Class to hold general information and methods to do API calls with youtube '''
+
+    moteChannelId = 'UC0Tvo7Chnyvgliwrmiqosbg'
+
+    def __init__(self):
+        # Get developer key from config file
+        config = configparser.ConfigParser()
+        config.read('config.ini')
+        self.DEVELOPER_KEY = config['youtube']['api_key']
+        
+        # Create a reference to the google API for youtube
+        self.youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey = self.DEVELOPER_KEY)
+
+
+    def searchForVideo(self,  videoQuantity: int, query: str, channelID = None):
+
+        # Create the request
+        request = self.youtube.search().list(
+            part = 'snippet',
+            channelId = channelID,
+            maxResults = videoQuantity,
+            q = query,
+            type = 'video'
+            videoEmbeddable = 'true'
+        )
+
+
+
 def main():
-    # Disable OAuthlib's HTTPS verification when running locally.
-    # *DO NOT* leave this option enabled in production.
-    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+    
+
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    DEVELOPER_KEY = config['youtube']['api_key']
 
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = ""
 
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey = DEVELOPER_KEY)
