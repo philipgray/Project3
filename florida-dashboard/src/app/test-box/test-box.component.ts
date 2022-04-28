@@ -24,20 +24,11 @@ export class TestBoxComponent implements OnInit {
   constructor(private database: DatabaseApiService) { }
 
   ngOnInit(): void {
-    this.testShowDataFetch();
-  }
-
-  testShowData(){
-    this.database.testGetData().subscribe(resp => {
-      // Display headers
-      const keys = resp.headers.keys();
-      this.headers = keys.map(key =>
-        `${key}: ${resp.headers.get(key)}`);
-
-        this.body = {... resp.body!};
+    this.database.getMessages()
+    .then( (response) => (response.json()))
+    .then( (json) => {
+      this.body = json[0].message;
     });
-
-
   }
 
   getData(resp: HttpResponse<any>){
@@ -45,7 +36,7 @@ export class TestBoxComponent implements OnInit {
   }
 
   testShowDataFetch(){
-    this.database.testFetchGetData()
+    this.database.getMessages()
       .then(
       // Promise fulfilled, data delivered
         (value: any) => {

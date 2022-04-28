@@ -1,13 +1,12 @@
 .youtube {
-    width: 300px;
-    float: left;
-    padding: 10px;
-	margin: auto;
-	
-}
+    width: 40%;
+    float: center;
+    padding: auto;
+	margin: 20px;
+}  
 .youtube-right {
-    width: 300px;
-    float: left;
-    padding: 10px;
-	margin: auto;
+    width: 40%;
+    float: center;
+    padding: auto;
+	margin: 20px;
 }  

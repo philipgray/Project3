@@ -1,0 +1,12 @@
+.message{
+	margin: auto;
+	width: 80%;
+	padding: 10px;
+	border-radius: 10px;
+	border: 3px solid #905;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	font-size: 15px;
+	position: left;
+	font-weight: none;
+}

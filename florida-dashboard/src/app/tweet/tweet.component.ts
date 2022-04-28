@@ -21,10 +21,12 @@ export class TweetComponent implements OnInit {
   @Input() tweet: Tweet;
 
   constructor() {
-    this.tweet = {'_id': '0',
-    'created_at': '0',
-    'link': '',
-    'text': 'ERROR: Tweet not found.'}
+    this.tweet = {
+      '_id': '0',
+      'created_at': '0',
+      'link': '',
+      'text': 'ERROR: Tweet not found.',
+      }
   }
 
   ngOnInit(): void {

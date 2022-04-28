@@ -14,6 +14,7 @@ import { YoutubePanelComponent } from './youtube-panel/youtube-panel.component';
 import { BarGraphComponent } from './bar-graph/bar-graph.component';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TweetComponent } from './tweet/tweet.component';
+import { ChatboardComponent } from './chatboard/chatboard.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TweetComponent } from './tweet/tweet.component';
     BarGraphComponent,
     TweetListComponent,
     TweetComponent,
+    ChatboardComponent,
   ],
   imports: [
     BrowserModule,
