@@ -51,19 +51,24 @@ def api_historical_tweet_frequency():
 
 @app.route('/api/v1/redtide/youtube', methods=['GET'])
 def api_youtube_video():
-    # Search the database for videos in the chosen category
-    youtube = mongo.db.youtube
-    videoCategory = youtube.find({'category': 'symptoms'}, sort = [('databaseInsertDate', -1)], limit = 1)
 
     recentVideo = None
 
-    # This for loop is not the most elegant solution, but it works.
-    # The .find result should only contain a single element, so this is still optimized
-    for video in videoCategory:
-        recentVideo = video
-        
-    if (recentVideo == None):
-        print("Error: there is no video in this category")
+    # Use parameter in video
+    if 'category' in request.args:
+
+        # Search the database for videos in the chosen category
+        youtube = mongo.db.youtube
+        videoCategory = youtube.find({'category': request.args['category']}, sort = [('databaseInsertDate', -1)], limit = 1)
+
+
+        # This for loop is not the most elegant solution, but it works.
+        # The .find result should only contain a single element, so this is still optimized
+        for video in videoCategory:
+            recentVideo = video
+            
+        if (recentVideo == None):
+            print("Error: there is no video in this category")
 
     return recentVideo
 

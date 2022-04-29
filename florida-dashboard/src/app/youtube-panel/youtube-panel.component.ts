@@ -8,7 +8,7 @@ import { DatabaseApiService } from '../services/database-api.service';
   template: `
   <div class="youtube">
     <app-youtube-video
-      videoSrc="https://www.youtube.com/embed/ATORywg69Lg"> </app-youtube-video>
+      videoSrc="https://www.youtube.com/embed/{{awarenessVideoId}}"> </app-youtube-video>
 	  </div>
 	<div class="youtube-right">
     <app-youtube-video
@@ -20,6 +20,7 @@ import { DatabaseApiService } from '../services/database-api.service';
 export class YoutubePanelComponent implements OnInit {
 
   symptomVideoId: string = "";
+  awarenessVideoId: string = "";
 
   constructor(private database: DatabaseApiService) { }
 
@@ -30,6 +31,13 @@ export class YoutubePanelComponent implements OnInit {
     .then( (response) => response.json())
     .then( (data) => {
       this.symptomVideoId = data['videoId']
+    })
+
+    // Get recent awareness video
+    this.database.getRecentYoutubeVideo("awareness")
+    .then( (response) => response.json())
+    .then( (data) => {
+      this.awarenessVideoId = data['videoId']
     })
   }
 

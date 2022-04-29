@@ -44,7 +44,7 @@ export class DatabaseApiService {
    * @param category the category of video (symptoms, awareness, prevention)
    */
   getRecentYoutubeVideo(category: string) {
-    return fetch(this.backendApiEndpoint + '/api/v1/redtide/youtube', {
+    return fetch(this.backendApiEndpoint + '/api/v1/redtide/youtube?category=' + category, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
