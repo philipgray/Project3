@@ -108,7 +108,7 @@ class RedTideDB:
 
 def main():
     client = RedTideDB()
-    client.addYoutubeVideo("72ss", 'symptoms')
+    client.addYoutubeVideo("ATORywg69Lg", 'information')
     print(client.getRecentYoutubeVideo('symptoms'))
     client.close()
 

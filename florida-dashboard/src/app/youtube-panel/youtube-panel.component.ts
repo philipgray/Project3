@@ -14,6 +14,11 @@ import { DatabaseApiService } from '../services/database-api.service';
     <app-youtube-video
       videoSrc="https://www.youtube.com/embed/{{symptomVideoId}}"> </app-youtube-video>
 	</div>
+
+  <div class="youtube-right">
+    <app-youtube-video
+      videoSrc="https://www.youtube.com/embed/{{informationVideoId}}"> </app-youtube-video>
+	</div>
   `,
   styleUrls: ['./youtube-panel.component.css']
 })
@@ -21,6 +26,7 @@ export class YoutubePanelComponent implements OnInit {
 
   symptomVideoId: string = "";
   awarenessVideoId: string = "";
+  informationVideoId: string = "";
 
   constructor(private database: DatabaseApiService) { }
 
@@ -38,6 +44,13 @@ export class YoutubePanelComponent implements OnInit {
     .then( (response) => response.json())
     .then( (data) => {
       this.awarenessVideoId = data['videoId']
+    })
+
+    // Get recent informational video
+    this.database.getRecentYoutubeVideo("information")
+    .then( (response) => response.json())
+    .then( (data) => {
+      this.informationVideoId = data['videoId']
     })
   }
 

@@ -63,8 +63,7 @@ class YoutubeScraper:
 def main():
     
     scraper = YoutubeScraper()
-    print(scraper.searchRelevantMoteVideo()['id']['videoId'])
-    print(scraper.searchRelevantMedicalVideo()['id']['videoId'])
+    print(scraper.searchRelevantMoteVideo())
 
 if __name__ == "__main__":
     main()
