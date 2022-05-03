@@ -53,4 +53,21 @@ export class DatabaseApiService {
     });
   }
 
+  /**
+   * Retrives the current cell count information in our database.
+   * To get the data, use .then() to get the json from the response,
+   * then use another .then() to index into the json and access ['cellCountList']
+   * @returns Javascript promise containing a json dictionary with a key 'cellCountList'
+   * that has a list of entries from our database.
+   */
+  getCellCountByLocation() {
+    return fetch(this.backendApiEndpoint + '/api/v1/redtide/cellcounts', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*'
+      }
+    });
+  }
+
 }

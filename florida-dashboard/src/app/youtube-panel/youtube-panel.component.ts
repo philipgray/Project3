@@ -8,7 +8,7 @@ import { DatabaseApiService } from '../services/database-api.service';
   template: `
   <div class="youtube">
     <app-youtube-video
-      videoSrc="https://www.youtube.com/embed/{{awarenessVideoId}}"> </app-youtube-video>
+      videoSrc="https://www.youtube.com/embed/{{trendingVideoId}}"> </app-youtube-video>
 	  </div>
 	<div class="youtube-right">
     <app-youtube-video
@@ -25,7 +25,7 @@ import { DatabaseApiService } from '../services/database-api.service';
 export class YoutubePanelComponent implements OnInit {
 
   symptomVideoId: string = "";
-  awarenessVideoId: string = "";
+  trendingVideoId: string = "";
   informationVideoId: string = "";
 
   constructor(private database: DatabaseApiService) { }
@@ -39,11 +39,11 @@ export class YoutubePanelComponent implements OnInit {
       this.symptomVideoId = data['videoId']
     })
 
-    // Get recent awareness video
-    this.database.getRecentYoutubeVideo("awareness")
+    // Get recent trending video
+    this.database.getRecentYoutubeVideo("trending")
     .then( (response) => response.json())
     .then( (data) => {
-      this.awarenessVideoId = data['videoId']
+      this.trendingVideoId = data['videoId']
     })
 
     // Get recent informational video

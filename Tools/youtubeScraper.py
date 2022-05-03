@@ -28,6 +28,14 @@ class YoutubeScraper:
 
 
     def searchForVideo(self,  videoQuantity: int, query: str, channelID = None):
+        ''' Uses YouTube API to search for videos.
+        
+        PARAMETERS
+        videoQuantity: how many search results you want to return
+        query: the search term to use
+        (optional) channelID: the channel to search from
+        
+        RETURN - The YouTube API response json. Index into ['items'] to get the videos from this search. '''
 
         # Create the request
         request = self.youtube.search().list(
@@ -60,10 +68,18 @@ class YoutubeScraper:
         
         return response['items'][0]
 
+    def searchTrendingVideo(self, query: str = 'red tide'):
+        ''' Searches all of YouTube for the most relevant video 
+        RETURN - json dictionary containing all infomraiton about the video, including its ID.'''
+
+        response = self.searchForVideo(1, query)
+
+        return response['items'][0]
+
 def main():
     
     scraper = YoutubeScraper()
-    print(scraper.searchRelevantMoteVideo())
+    print(scraper.searchTrendingVideo())
 
 if __name__ == "__main__":
     main()

@@ -57,13 +57,15 @@ class RedTideDB:
         db.tweetHistory.insert_one(data)
 
     def addYoutubeVideo(self, videoId, category):
-        ''' Store a youtube video, based on ID and category, into the database.
+        """ 
+        Store a youtube video, based on ID and category, into the database.
         Also stores the day this method was called, and does not change anything if the
         video is already in the database.
 
         PARAMETERS
         videoId - the youtube video's ID
-        category - the category of this video (for example: symptoms, awareness, prevention, etc.)'''
+        category - the category of this video (for example: symptoms, awareness, prevention, etc.)
+        """
         youtube = self.client.redtideDB.youtube
         videoCategory = youtube.find({'category': category})
 
@@ -85,31 +87,13 @@ class RedTideDB:
                 'databaseInsertDate': str(date.today())
             })
 
-    def getRecentYoutubeVideo(self, category: str):
-
-        # Search the database for videos in the chosen category
-        youtube = self.client.redtideDB.youtube
-        videoCategory = youtube.find({'category': category}, sort = [('databaseInsertDate', -1)], limit = 1)
-
-        recentVideo = None
-
-        # This for loop is not the most elegant solution, but it works.
-        # The .find result should only contain a single element, so this is still optimized
-        for video in videoCategory:
-            recentVideo = video
-            
-        if (recentVideo == None):
-            print("Error: there is no video in this category")
-
-        return recentVideo
             
 
 
 
 def main():
     client = RedTideDB()
-    client.addYoutubeVideo("ATORywg69Lg", 'information')
-    print(client.getRecentYoutubeVideo('symptoms'))
+    client.addYoutubeVideo("R7t7qrH_dsc", 'trending')
     client.close()
 
 if __name__ == "__main__":
