@@ -16,6 +16,8 @@ import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TweetComponent } from './tweet/tweet.component';
 import { ChatboardComponent } from './chatboard/chatboard.component';
 import { ChatboardMessageComponent } from './chatboard-message/chatboard-message.component';
+import { SensordataComponent } from './sensordata/sensordata.component';
+import { SensordataLineComponent } from './sensordata-line/sensordata-line.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ChatboardMessageComponent } from './chatboard-message/chatboard-message
     TweetComponent,
     ChatboardComponent,
     ChatboardMessageComponent,
+    SensordataComponent,
+    SensordataLineComponent,
   ],
   imports: [
     BrowserModule,

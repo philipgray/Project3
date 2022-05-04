@@ -58,7 +58,7 @@ import { Component } from '@angular/core';
 	<div>
     <app-youtube-panel></app-youtube-panel>
 	</div>
-
+	<app-sensordata></app-sensordata>
     <!-- Put spotify content right under this anchor -->
 	<app-chatboard></app-chatboard>
 	</div>
