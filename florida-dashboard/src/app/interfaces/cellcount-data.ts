@@ -1,7 +1,7 @@
 export interface CellcountData {
-  Abundance: string,
-  County: string,
-  LOCTATION: string,
-  SampleDate_t: string,
-  Source: string
+  abundance: string,
+  county: string,
+  location: string,
+  date: string,
+  source: string
 }
