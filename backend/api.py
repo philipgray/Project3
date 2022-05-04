@@ -58,6 +58,9 @@ def api_historical_tweet_frequency():
     historicalTweetAnalyzer.py.
     The data is already processed and formatted to go into a Google Charts component.
     """
+    tweetHistory = mongo.db.tweetHistory.find_one()
+    response = jsonify(tweetHistory['data'])
+    return response
 
 @app.route('/messages/all', methods=['GET'])
 @cross_origin()
@@ -98,12 +101,6 @@ def api_post_messages():
     db.messages.insert_one(Message)
     return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
 
-@app.route('/api/v1/redtide/tweets/history/frequency', methods=['GET'])
-def api_historical_tweet_frequency():
-    tweetHistory = mongo.db.tweetHistory.find_one()
-    response = jsonify(tweetHistory['data'])
-    # response.headers.add("Access-Control-Allow-Origin", "*")
-    return response
 
 
 @app.route('/api/v1/redtide/youtube', methods=['GET'])

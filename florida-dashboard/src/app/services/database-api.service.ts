@@ -55,6 +55,16 @@ export class DatabaseApiService {
     });
   }
 
+  getMessages(): Promise<any>{
+    return fetch('http://127.0.0.1:5000/messages/all', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*',
+      }
+    })
+  }
+
   /**
    * Retrives the current cell count information in our database.
    * To get the data, use .then() to get the json from the response,
@@ -71,4 +81,6 @@ export class DatabaseApiService {
       }
     });
   }
+
+
 }
