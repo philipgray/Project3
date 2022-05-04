@@ -20,6 +20,7 @@ export class DatabaseApiService {
    */
   getHistoricalTwitterData(): Promise<any>{
     return fetch(this.backendApiEndpoint + '/api/v1/redtide/tweets/history/frequency', {
+
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -29,6 +30,7 @@ export class DatabaseApiService {
   }
 
   testNewApi(){
+
     return fetch(this.backendApiEndpoint + '/api/v1/redtide/tweets/all', {
       method: 'GET',
       headers: {
@@ -69,5 +71,4 @@ export class DatabaseApiService {
       }
     });
   }
-
 }

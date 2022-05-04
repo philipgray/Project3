@@ -1,6 +1,10 @@
 import configparser
 import certifi
 import flask
+
+import time
+from pymongo import MongoClient
+
 from flask import request, jsonify
 from flask_pymongo import PyMongo
 from flask_cors import CORS, cross_origin
@@ -20,11 +24,14 @@ app.config["DEBUG"] = True
 app.config["MONGO_URI"] = cs
 ca = certifi.where()
 mongo = PyMongo(app, tlsCAFile=ca)
+client = MongoClient(cs, tlsCAFile=ca)
+
 
 
 @app.route('/')
 def home():
     return "welcome"
+
 
 
 @app.route('/api/v1/redtide/tweets/all', methods=['GET'])
@@ -42,6 +49,7 @@ def api_all_tweets():
     return jsonify(results)
 
 
+
 @app.route('/api/v1/redtide/tweets/history/frequency', methods=['GET'])
 def api_historical_tweet_frequency():
     """
@@ -50,10 +58,53 @@ def api_historical_tweet_frequency():
     historicalTweetAnalyzer.py.
     The data is already processed and formatted to go into a Google Charts component.
     """
+
+@app.route('/messages/all', methods=['GET'])
+@cross_origin()
+def api_all_messages():
+    """
+    This method is used for getting and returning all tweets in our mongoDB.
+    We use find() to get the tweets, and then we use sort().
+    Sort uses the tweet id (_id) and displays it from the newest to the oldest.
+    """
+    messages = mongo.db.messages.find().sort([('_id', -1)])
+    results = []
+    for message in messages:
+        results.append(message)
+    return jsonify(results)
+
+@app.route('/messages/send')
+@cross_origin()
+def api_query_messages():
+    inname = request.args.get('name')
+    inlocation = request.args.get('location')
+    inmessage = request.args.get('message')
+    unixtime = time.time()
+    db = client.redtideDB
+    Message = {"name": inname, "location": inlocation, "message": inmessage, "_id": unixtime}
+    db.messages.insert_one(Message)
+    return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
+
+@app.route('/messages/post', methods=['POST'])
+@cross_origin()
+def api_post_messages():
+    inname = request.form.get('name')
+    inlocation = request.form.get('location')
+    inmessage = request.form.get('message')
+    
+    unixtime = time.time()
+    db = client.redtideDB
+    Message = {"name": inname, "location": inlocation, "message": inmessage, "time": unixtime}
+    db.messages.insert_one(Message)
+    return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
+
+@app.route('/api/v1/redtide/tweets/history/frequency', methods=['GET'])
+def api_historical_tweet_frequency():
     tweetHistory = mongo.db.tweetHistory.find_one()
     response = jsonify(tweetHistory['data'])
     # response.headers.add("Access-Control-Allow-Origin", "*")
     return response
+
 
 @app.route('/api/v1/redtide/youtube', methods=['GET'])
 def api_youtube_video():
@@ -114,6 +165,7 @@ def api_tweets():
 @app.route('/api/v1/redtide/historical/month', methods=['GET'])
 def api_last_month():
     return "hi this doesn't work yet :)"
+
 
 @app.route('/api/v1/redtide/cellcounts')
 def api_cell_counts():

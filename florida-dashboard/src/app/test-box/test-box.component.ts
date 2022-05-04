@@ -60,29 +60,13 @@ export class TestBoxComponent implements OnInit {
   constructor(private database: DatabaseApiService) { }
 
   ngOnInit(): void {
-    this.database.testNewApi()
+
+    this.database.getMessages()
     .then( (response) => (response.json()))
     .then( (json) => {
-      this.body = json[0].text;
-      this.link = json[0].link;
+      this.body = json[0].message;
     });
 
-    this.database.getCellCountByLocation()
-    .then( (response) => (response.json()))
-    .then( (json) => {
-      let entries: [] = json.cellCountList;
-
-      for(let i = 0; i < entries.length; i++){
-        console.log('entry', i, entries[i]);
-      }
-
-      this.cells = json.cellCountList;
-      this.cellsToShow = this.cells;
-    });
-
-    console.log('OKAY: ', this.cells[0])
-
-    this.filterSarasota();
   }
 
   getData(resp: HttpResponse<any>){
@@ -90,7 +74,10 @@ export class TestBoxComponent implements OnInit {
   }
 
   testShowDataFetch(){
+
     this.database.testNewApi()
+
+    this.database.getMessages()
       .then(
       // Promise fulfilled, data delivered
         (value: any) => {
