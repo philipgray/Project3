@@ -164,7 +164,8 @@ def api_last_month():
     return "hi this doesn't work yet :)"
 
 
-@app.route('/api/v1/redtide/cellcounts')
+@app.route('/api/v1/redtide/cellcounts', methods=['GET'])
+@cross_origin()
 def api_cell_counts():
     """
     This method is used for getting all of the algae cell count data in our database.
@@ -185,5 +186,5 @@ def api_cell_counts():
     return {'cellCountList': data}
 
 
-# run the server
-app.run()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=3000)
