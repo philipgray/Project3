@@ -59,8 +59,13 @@ import { Component } from '@angular/core';
     <app-youtube-panel></app-youtube-panel>
 	</div>
 
+
     <!-- Put spotify content right under this anchor -->
 
+
+	<app-sensordata></app-sensordata>
+    <!-- Put spotify content right under this anchor -->
+	<app-chatboard></app-chatboard>
 	</div>
 
 	</div>
@@ -72,4 +77,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'florida-dashboard';
+  getValues(text: string, location:string , item:string ){
+	console.log(text)
+	}
 }

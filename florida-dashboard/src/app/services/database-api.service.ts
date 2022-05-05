@@ -10,6 +10,8 @@ import { Tweet } from '../interfaces/tweet';
 })
 export class DatabaseApiService {
 
+  private backendApiEndpoint = 'http://127.0.0.1:5000'
+
   constructor(private http: HttpClient) { }
 
 
@@ -17,7 +19,8 @@ export class DatabaseApiService {
    * Retrieves frequency data for tweets/month about red tide from the database
    */
   getHistoricalTwitterData(): Promise<any>{
-    return fetch('http://127.0.0.1:5000/api/v1/redtide/tweets/history/frequency', {
+    return fetch(this.backendApiEndpoint + '/api/v1/redtide/tweets/history/frequency', {
+
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +30,8 @@ export class DatabaseApiService {
   }
 
   testNewApi(){
-    return fetch('http://127.0.0.1:5000/api/v1/redtide/tweets/all', {
+
+    return fetch(this.backendApiEndpoint + '/api/v1/redtide/tweets/all', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -35,5 +39,48 @@ export class DatabaseApiService {
       }
     });
   }
+
+  /**
+   * Retrieves the most recent video in our database matching the specified category
+   * (the video most recently chosen by our backend)
+   * @param category the category of video (symptoms, awareness, prevention)
+   */
+  getRecentYoutubeVideo(category: string) {
+    return fetch(this.backendApiEndpoint + '/api/v1/redtide/youtube?category=' + category, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*'
+      }
+    });
+  }
+
+  getMessages(): Promise<any>{
+    return fetch('http://127.0.0.1:5000/messages/all', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*',
+      }
+    })
+  }
+
+  /**
+   * Retrives the current cell count information in our database.
+   * To get the data, use .then() to get the json from the response,
+   * then use another .then() to index into the json and access ['cellCountList']
+   * @returns Javascript promise containing a json dictionary with a key 'cellCountList'
+   * that has a list of entries from our database.
+   */
+  getCellCountByLocation() {
+    return fetch(this.backendApiEndpoint + '/api/v1/redtide/cellcounts', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*'
+      }
+    });
+  }
+
 
 }

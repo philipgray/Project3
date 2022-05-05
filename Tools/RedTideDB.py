@@ -2,13 +2,13 @@ import configparser
 import pymongo
 from pymongo import MongoClient
 import certifi
+from datetime import date
 
 
 class RedTideDB:
     """
     hi alex and ferris
     """
-
     # https://www.mongodb.com/docs/manual/reference/connection-string/
     def __init__(self):
         self.db = None
@@ -68,3 +68,51 @@ class RedTideDB:
     def close(self):
         self.client.close()
         print("Database connection closed.")
+
+    def addHistoricalData(self, data: dict):
+        db = self.client.redtideDB
+        db.tweetHistory.insert_one(data)
+
+    def addYoutubeVideo(self, videoId, category):
+        """
+        Store a youtube video, based on ID and category, into the database.
+        Also stores the day this method was called, and does not change anything if the
+        video is already in the database.
+
+        PARAMETERS
+        videoId - the youtube video's ID
+        category - the category of this video (for example: symptoms, awareness, prevention, etc.)
+        """
+        youtube = self.client.redtideDB.youtube
+        videoCategory = youtube.find({'category': category})
+
+        # We do not want to add duplicates of the video
+        duplicateVideo = False
+
+        # Check to see if videoId is already in the database
+        for video in videoCategory:
+            if (video['videoId'] == videoId):
+                duplicateVideo = True
+
+        # As long as the video isn't already in the database, add it to the database
+        if (not duplicateVideo):
+            print("Adding video to databse")
+            youtube.insert_one({
+                '_id': str(date.today()) + videoId,
+                'category': category,
+                'videoId': videoId,
+                'databaseInsertDate': str(date.today())
+            })
+
+
+
+
+
+def main():
+    client = RedTideDB()
+    client.addYoutubeVideo("R7t7qrH_dsc", 'trending')
+    client.close()
+
+if __name__ == "__main__":
+    main()
+
