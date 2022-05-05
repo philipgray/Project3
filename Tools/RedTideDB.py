@@ -1,4 +1,5 @@
 import configparser
+import pymongo
 from pymongo import MongoClient
 import certifi
 
@@ -42,16 +43,28 @@ class RedTideDB:
         :return:
         """
         db = self.client.redtideDB
-        db.tweets.insert_many(multiple_tweets)
+        if multiple_tweets:
+            db.tweets.insert_many(multiple_tweets)
 
     def addHistoricalData(self, data: dict):
         db = self.client.redtideDB
         db.tweetHistory.insert_one(data)
+
+    def addSensorData(self, data: list):
+        db = self.client.redtideDB
+        if data:
+            db.sensorData.insert_many(data)
+
+    def getLastTweet(self) -> int:
+        db = self.client.redtideDB
+        lastTweetID = db.tweets.find_one(sort=[('_id', pymongo.DESCENDING)])['_id']
+        return lastTweetID
+
+    def getLastSensorData(self) -> int:
+        db = self.client.redtideDB
+        lastSensorID = db.sensorData.find_one(sort=[('_id', pymongo.DESCENDING)])['_id']
+        return lastSensorID
 
     def close(self):
         self.client.close()
         print("Database connection closed.")
-
-    def addHistoricalData(self, data: dict):
-        db = self.client.redtideDB
-        db.tweetHistory.insert_one(data)

@@ -4,11 +4,12 @@ import requests
 
 
 class TwitterScraper:
-    def __init__(self):
+    def __init__(self, last_id=0):
         config = configparser.ConfigParser()
         config.read('config.ini')
         self.bearer_token = config['twitter']['bearer']
         self.search_url = "https://api.twitter.com/2/tweets/search/recent"
+        self.last_id = last_id
 
     def bearer_oauth(self, r):
         r.headers["Authorization"] = f"Bearer {self.bearer_token}"
@@ -29,18 +30,19 @@ class TwitterScraper:
         results = []
 
         for data in response['data']:
-            date = parser.parse(data['created_at'])
-            tweet = {
-                '_id': data['id'],
-                'text': data['text'],
-                'created_at': date,
-                'link': f"https://www.twitter.com/twitter/status/{data['id']}",
-                'likes': data['public_metrics']['like_count'],
-                'replies': data['public_metrics']['reply_count'],
-                'retweets': data['public_metrics']['retweet_count'] + data['public_metrics']['quote_count']
-            }
+            if data['id'] > self.last_id:
+                date = parser.parse(data['created_at'])
+                tweet = {
+                    '_id': data['id'],
+                    'text': data['text'],
+                    'created_at': date,
+                    'link': f"https://www.twitter.com/twitter/status/{data['id']}",
+                    'likes': data['public_metrics']['like_count'],
+                    'replies': data['public_metrics']['reply_count'],
+                    'retweets': data['public_metrics']['retweet_count'] + data['public_metrics']['quote_count']
+                }
 
-            results.append(tweet)
+                results.append(tweet)
 
         return results
 
