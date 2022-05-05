@@ -10,7 +10,9 @@ import { HttpResponse } from '@angular/common/http';
     </p>
 	
 	<div class="chatboard-container">
-	
+	<p>Red Tide Chatboard:</p>
+	<p class="subtext"> You can chat with people about red tide below.<p>
+	<div class="message-container">
 	<app-chatboard-message index=0>
 	</app-chatboard-message>
 	
@@ -19,11 +21,27 @@ import { HttpResponse } from '@angular/common/http';
 	
 	<app-chatboard-message index=2>
 	</app-chatboard-message>
+	<app-chatboard-message index=3>
+	</app-chatboard-message>
+	<app-chatboard-message index=4>
+	</app-chatboard-message>
+	<app-chatboard-message index=5>
+	</app-chatboard-message>
+	<app-chatboard-message index=6>
+	</app-chatboard-message>
+	<app-chatboard-message index=7>
+	</app-chatboard-message>
+	<app-chatboard-message index=8>
+	</app-chatboard-message>
+	<app-chatboard-message index=9>
+	</app-chatboard-message>
 	
+	</div>
+	<div class="textboxes">
 	<p>
 	Text:
 	</p>
-	<input type="text" #text>
+	<input type="text" #text class="messageTextBox">
 	<p>
 	Location:
 	</p>
@@ -34,6 +52,9 @@ import { HttpResponse } from '@angular/common/http';
 	<input type="text" #name>
 	
 	<button (click)="getValues(text.value, location.value, name.value)">Send</button>
+	</div>
+	<div>
+	<p></p></div>
 	</div>
 	`,
   styleUrls: ['./chatboard.component.css']
