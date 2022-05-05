@@ -13,7 +13,7 @@ app-navigation-bar {
 	position: relative;
 	height: 100%;
 	margin: auto;
-	width: 75%;
+	width: 96%;
 	border: 0px solid #905;
 	padding: 0px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -83,19 +83,19 @@ app-navigation-bar {
     float: left;
     padding: 15px;
 	margin: auto;
-}  
+}
 
 .float-child-right {
     width: 35%;
     float: right;
     padding: 35px;
 	margin: auto;
-	
-}  
+
+}
 
 .spotify {
     width: 130%;
     float: center;
     padding: 20px;
 	margin: auto;
-}  
+}

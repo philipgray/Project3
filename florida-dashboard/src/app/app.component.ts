@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template:`
-  <app-test-box></app-test-box>
+  <!-- <app-test-box></app-test-box> -->
   <a id = 'home'></a>
 	<div class="containercontainer">
 
@@ -30,15 +30,15 @@ import { Component } from '@angular/core';
 	</div>
 
 	<a id = 'twitter'></a>
-	<a id = 'spotify'></a>
 	<div>
     <!-- Put twitter content right under this anchor -->
 
-	<div>
-	<div class="float-child">
-    <app-bar-graph></app-bar-graph>
+    <div>
+      <div class="float-child">
+        <app-bar-graph></app-bar-graph>
 
-	<!-- Spotify Here Temporarily -->
+        <!-- Spotify Here Temporarily -->
+        <a id = 'spotify'></a>
 	<div class="spotify">
 	<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/73Bxsi1UB4V8d9u4sDLu3O?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 	</div>
@@ -52,10 +52,10 @@ import { Component } from '@angular/core';
 	</div>
 
     <!-- Put youtube content right under this anchor -->
-    <a id = 'youtube'></a>
 
 	</div>
 	<div>
+    <a id = 'youtube'></a>
     <app-youtube-panel></app-youtube-panel>
 	</div>
 
