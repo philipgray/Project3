@@ -22,6 +22,7 @@ import { DatabaseApiService } from '../services/database-api.service';
 
 
   <app-sensordata-line *ngFor='let beachData of dataToShow'
+  [class]='beachData.abundance'
   [date]='beachData.date'
   [location]='beachData.location'
   [level]='beachData.abundance'
