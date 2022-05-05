@@ -9,10 +9,11 @@ class RedTideDB:
     """
     hi alex and ferris
     """
+
     # https://www.mongodb.com/docs/manual/reference/connection-string/
     def __init__(self):
         self.db = None
-        
+
         ca = certifi.where()
 
         config = configparser.ConfigParser()
@@ -91,21 +92,19 @@ class RedTideDB:
 
         # Check to see if videoId is already in the database
         for video in videoCategory:
-            if (video['videoId'] == videoId):
+            if video['videoId'] == videoId:
                 duplicateVideo = True
 
         # As long as the video isn't already in the database, add it to the database
-        if (not duplicateVideo):
+        if not duplicateVideo:
             print("Adding video to databse")
-            youtube.insert_one({
-                '_id': str(date.today()) + videoId,
-                'category': category,
-                'videoId': videoId,
-                'databaseInsertDate': str(date.today())
-            })
-
-
-
+            youtube.insert_one(
+                {'_id': str(date.today()) + videoId,
+                 'category': category,
+                 'videoId': videoId,
+                 'databaseInsertDate': str(date.today())
+                 }
+            )
 
 
 def main():
@@ -113,6 +112,6 @@ def main():
     client.addYoutubeVideo("R7t7qrH_dsc", 'trending')
     client.close()
 
+
 if __name__ == "__main__":
     main()
-
