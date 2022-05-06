@@ -27,11 +27,9 @@ mongo = PyMongo(app, tlsCAFile=ca)
 client = MongoClient(cs, tlsCAFile=ca)
 
 
-
 @app.route('/')
 def home():
     return "welcome"
-
 
 
 @app.route('/api/v1/redtide/tweets/all', methods=['GET'])
@@ -49,7 +47,6 @@ def api_all_tweets():
     return jsonify(results)
 
 
-
 @app.route('/api/v1/redtide/tweets/history/frequency', methods=['GET'])
 def api_historical_tweet_frequency():
     """
@@ -61,6 +58,7 @@ def api_historical_tweet_frequency():
     tweetHistory = mongo.db.tweetHistory.find_one()
     response = jsonify(tweetHistory['data'])
     return response
+
 
 @app.route('/messages/all', methods=['GET'])
 @cross_origin()
@@ -76,6 +74,7 @@ def api_all_messages():
         results.append(message)
     return jsonify(results)
 
+
 @app.route('/messages/send')
 @cross_origin()
 def api_query_messages():
@@ -88,19 +87,19 @@ def api_query_messages():
     db.messages.insert_one(Message)
     return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
 
+
 @app.route('/messages/post', methods=['POST'])
 @cross_origin()
 def api_post_messages():
     inname = request.form.get('name')
     inlocation = request.form.get('location')
     inmessage = request.form.get('message')
-    
+
     unixtime = time.time()
     db = client.redtideDB
     Message = {"name": inname, "location": inlocation, "message": inmessage, "time": unixtime}
     db.messages.insert_one(Message)
     return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
-
 
 
 @app.route('/api/v1/redtide/youtube', methods=['GET'])
@@ -120,14 +119,13 @@ def api_youtube_video():
 
         # Search the database for videos in the chosen category
         youtube = mongo.db.youtube
-        videoCategory = youtube.find({'category': request.args['category']}, sort = [('databaseInsertDate', -1)], limit = 1)
-
+        videoCategory = youtube.find({'category': request.args['category']}, sort=[('databaseInsertDate', -1)], limit=1)
 
         # This for loop is not the most elegant solution, but it works.
         # The .find result should only contain a single element, so this is still optimized
         for video in videoCategory:
             recentVideo = video
-            
+
         if (recentVideo == None):
             print("Error: there is no video in this category")
 
@@ -185,6 +183,7 @@ def api_cell_counts():
 
     return {'cellCountList': data}
 
-
+"""
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
+"""
