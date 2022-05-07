@@ -1,0 +1,2994 @@
+{
+    "displayFieldName": "HAB_ID",
+    "fieldAliases": {
+        "OBJECTID": "OBJECTID",
+        "HAB_ID": "FWC HAB ID",
+        "SampleDate_t": "Sample Date",
+        "LOCATION": "Location Description",
+        "LATITUDE": "LATITUDE",
+        "LONGITUDE": "LONGITUDE",
+        "SAMPLE_DEPTH": "Sample Depth (m)",
+        "Abundance": "Abundance",
+        "ExportDate": "Export Date",
+        "Source": "Source",
+        "County": "County"
+    },
+    "geometryType": "esriGeometryPoint",
+    "spatialReference": {
+        "wkid": 102100,
+        "latestWkid": 3857
+    },
+    "fields": [
+        {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OBJECTID"
+        },
+        {
+            "name": "HAB_ID",
+            "type": "esriFieldTypeString",
+            "alias": "FWC HAB ID",
+            "length": 18
+        },
+        {
+            "name": "SampleDate_t",
+            "type": "esriFieldTypeString",
+            "alias": "Sample Date",
+            "length": 12
+        },
+        {
+            "name": "LOCATION",
+            "type": "esriFieldTypeString",
+            "alias": "Location Description",
+            "length": 100
+        },
+        {
+            "name": "LATITUDE",
+            "type": "esriFieldTypeDouble",
+            "alias": "LATITUDE"
+        },
+        {
+            "name": "LONGITUDE",
+            "type": "esriFieldTypeDouble",
+            "alias": "LONGITUDE"
+        },
+        {
+            "name": "SAMPLE_DEPTH",
+            "type": "esriFieldTypeDouble",
+            "alias": "Sample Depth (m)"
+        },
+        {
+            "name": "Abundance",
+            "type": "esriFieldTypeString",
+            "alias": "Abundance",
+            "length": 32
+        },
+        {
+            "name": "ExportDate",
+            "type": "esriFieldTypeDate",
+            "alias": "Export Date",
+            "length": 8
+        },
+        {
+            "name": "Source",
+            "type": "esriFieldTypeString",
+            "alias": "Source",
+            "length": 21
+        },
+        {
+            "name": "County",
+            "type": "esriFieldTypeString",
+            "alias": "County",
+            "length": 50
+        }
+    ],
+    "features": [
+        {
+            "attributes": {
+                "OBJECTID": 606065,
+                "HAB_ID": "HABW220426-028",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Dutchman Key; 1.3 mi E of (Anclote Anchorage)",
+                "LATITUDE": 28.193,
+                "LONGITUDE": -82.823,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pasco"
+            },
+            "geometry": {
+                "x": -9219814.186,
+                "y": 3273328.5370000005
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606066,
+                "HAB_ID": "HABW220426-021",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "South Bob Sikes Fishing Pier (Santa Rosa Sound)",
+                "LATITUDE": 30.34613,
+                "LONGITUDE": -87.1518,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Escambia"
+            },
+            "geometry": {
+                "x": -9701693.9977,
+                "y": 3548119.670400001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606067,
+                "HAB_ID": "HABW220426-009",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Seagate",
+                "LATITUDE": 26.2073,
+                "LONGITUDE": -81.8169,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9107815.6463,
+                "y": 3024778.6724999994
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606068,
+                "HAB_ID": "HABW220425-012",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Nokomis Beach",
+                "LATITUDE": 27.12332,
+                "LONGITUDE": -82.47122,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9180654.2155,
+                "y": 3138887.4199
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606069,
+                "HAB_ID": "HABW220425-007",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "North Lido Beach",
+                "LATITUDE": 27.31561,
+                "LONGITUDE": -82.58171,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192953.906,
+                "y": 3162958.6873999983
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606070,
+                "HAB_ID": "HABW220425-019",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Manasota Beach",
+                "LATITUDE": 27.01031,
+                "LONGITUDE": -82.41312,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9174186.5531,
+                "y": 3124759.906399999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606071,
+                "HAB_ID": "HABW220426-011",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "South Marco Beach",
+                "LATITUDE": 25.9117,
+                "LONGITUDE": -81.7294,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9098075.1908,
+                "y": 2988148.714200001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606072,
+                "HAB_ID": "HABW220425-027",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Anna Maria Island Rod & Reel Pier (Lower Tampa Bay)",
+                "LATITUDE": 27.5385,
+                "LONGITUDE": -82.7402,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9210596.9321,
+                "y": 3190912.813000001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606073,
+                "HAB_ID": "HABW220426-032",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Anglins Fishing Pier",
+                "LATITUDE": 26.189189,
+                "LONGITUDE": -80.09235,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Broward"
+            },
+            "geometry": {
+                "x": -8915839.6184,
+                "y": 3022531.7423
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606074,
+                "HAB_ID": "HABW220426-008",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Vanderbilt Beach",
+                "LATITUDE": 26.25375,
+                "LONGITUDE": -81.82377,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9108580.4112,
+                "y": 3030543.0625
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606075,
+                "HAB_ID": "HABW220426-006",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Redfish Pass; 1.8 mi E of (Pine Island Sound)",
+                "LATITUDE": 26.560417,
+                "LONGITUDE": -82.170817,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9147213.5065,
+                "y": 3068658.193
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606076,
+                "HAB_ID": "HABW220426-016",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Cork Island; W of (Pine Island Sound)",
+                "LATITUDE": 26.5767,
+                "LONGITUDE": -82.1347,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9143192.9805,
+                "y": 3070684.8205000013
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606077,
+                "HAB_ID": "HABW220426-030",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Anclote Key Beach; 3.5 mi W of",
+                "LATITUDE": 28.192,
+                "LONGITUDE": -82.909,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pasco"
+            },
+            "geometry": {
+                "x": -9229387.6622,
+                "y": 3273202.233600002
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606078,
+                "HAB_ID": "HABW220426-005",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Redfish Pass (Pine Island Sound)",
+                "LATITUDE": 26.5535,
+                "LONGITUDE": -82.1963,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9150050.2611,
+                "y": 3067797.3709999993
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606079,
+                "HAB_ID": "HABW220425-025",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Palma Sola Bay Bridge",
+                "LATITUDE": 27.4959,
+                "LONGITUDE": -82.6522,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9200800.8169,
+                "y": 3185565.694699999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606080,
+                "HAB_ID": "HABW220425-005",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Longboat Key Beach",
+                "LATITUDE": 27.37317,
+                "LONGITUDE": -82.63202,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9198554.3896,
+                "y": 3170172.271899998
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606081,
+                "HAB_ID": "HABW220426-022",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Palafox Pier (Pensacola Bay)",
+                "LATITUDE": 30.4018,
+                "LONGITUDE": -87.2128,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Escambia"
+            },
+            "geometry": {
+                "x": -9708484.4867,
+                "y": 3555302.751199998
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606082,
+                "HAB_ID": "HABW220426-001",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Boca Grande Pass",
+                "LATITUDE": 26.7117,
+                "LONGITUDE": -82.2583,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9156952.0695,
+                "y": 3087498.417100001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606083,
+                "HAB_ID": "HABW220425-033",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Sunset Beach; 2.7 mi W of",
+                "LATITUDE": 27.7459,
+                "LONGITUDE": -82.8045,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9217754.7754,
+                "y": 3216975.2008999996
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606084,
+                "HAB_ID": "HABW220426-037",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "St. Armands Key; N of (Pansy Bayou)",
+                "LATITUDE": 27.3225,
+                "LONGITUDE": -82.5803,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192796.9456,
+                "y": 3163821.9646999985
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606085,
+                "HAB_ID": "HABW220426-035",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "South Lido Park",
+                "LATITUDE": 27.29818,
+                "LONGITUDE": -82.56739,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9191359.8109,
+                "y": 3160775.0483999997
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606086,
+                "HAB_ID": "HABW220426-026",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Anclote Key Lighthouse; 3.9 mi W of",
+                "LATITUDE": 28.149,
+                "LONGITUDE": -82.906,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9229053.7037,
+                "y": 3267772.3016000018
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606087,
+                "HAB_ID": "HABW220426-031",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Dania Beach Fishing Pier",
+                "LATITUDE": 26.058006,
+                "LONGITUDE": -80.10887,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Broward"
+            },
+            "geometry": {
+                "x": -8917678.6164,
+                "y": 3006267.010499999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606088,
+                "HAB_ID": "HABW220426-012",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Buck Key; 1.9 mi NE of (Pine Island Sound)",
+                "LATITUDE": 26.532117,
+                "LONGITUDE": -82.15667,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9145638.6697,
+                "y": 3065136.5810000002
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606089,
+                "HAB_ID": "HABW220425-018",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Caspersen Beach",
+                "LATITUDE": 27.05703,
+                "LONGITUDE": -82.4436,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9177579.5712,
+                "y": 3130598.7025999986
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606090,
+                "HAB_ID": "HABW220425-023",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Skyway Fishing Pier; South (Lower Tampa Bay)",
+                "LATITUDE": 27.6055,
+                "LONGITUDE": -82.6508,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9200644.9697,
+                "y": 3199326.796599999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606091,
+                "HAB_ID": "HABW220426-018",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Little Bokeelia Island; N of (Charlotte Harbor)",
+                "LATITUDE": 26.705,
+                "LONGITUDE": -82.1837,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9148647.6355,
+                "y": 3086663.4952999987
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606092,
+                "HAB_ID": "HABW220425-014",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Venice Beach",
+                "LATITUDE": 27.10034,
+                "LONGITUDE": -82.46089,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9179504.2852,
+                "y": 3136013.5089999996
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606093,
+                "HAB_ID": "HABW220425-016",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Venice Fishing Pier",
+                "LATITUDE": 27.0735,
+                "LONGITUDE": -82.4509,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9178392.2034,
+                "y": 3132657.6077000014
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606094,
+                "HAB_ID": "HABW220426-039",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Mangrove Point; 1.7 mi NW of (Crystal Bay)",
+                "LATITUDE": 28.8921,
+                "LONGITUDE": -82.7427,
+                "SAMPLE_DEPTH": 0.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Citrus"
+            },
+            "geometry": {
+                "x": -9210875.2309,
+                "y": 3361919.9375
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606095,
+                "HAB_ID": "HABW220425-010",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Siesta Beach",
+                "LATITUDE": 27.26518,
+                "LONGITUDE": -82.5531,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9189769.0554,
+                "y": 3156641.730700001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606096,
+                "HAB_ID": "HABW220425-006",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Ringling Causeway",
+                "LATITUDE": 27.32682,
+                "LONGITUDE": -82.56244,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9190808.7795,
+                "y": 3164363.2630999982
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606097,
+                "HAB_ID": "HABW220425-003",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "FWRI Peninsula; SE tip of (Bayboro Harbor)",
+                "LATITUDE": 27.759803,
+                "LONGITUDE": -82.631267,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9198470.566,
+                "y": 3218724.0562999994
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606098,
+                "HAB_ID": "HABW220425-011",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Turtle Beach",
+                "LATITUDE": 27.21843,
+                "LONGITUDE": -82.51711,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9185762.6669,
+                "y": 3150788.2967999987
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606099,
+                "HAB_ID": "HABW220426-017",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Hemp Key; S of (Pine Island Sound)",
+                "LATITUDE": 26.5902,
+                "LONGITUDE": -82.1561,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9145575.2176,
+                "y": 3072365.286600001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606100,
+                "HAB_ID": "HABW220426-013",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Buck Key; S of (Blind Pass)",
+                "LATITUDE": 26.488,
+                "LONGITUDE": -82.1815,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9148402.7326,
+                "y": 3059648.455499999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606101,
+                "HAB_ID": "HABW220426-034",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Diamond Bay (Banana River)",
+                "LATITUDE": 28.35034,
+                "LONGITUDE": -80.61298,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8973795.8849,
+                "y": 3293215.8828999996
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606102,
+                "HAB_ID": "HABW220426-029",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Anclote Key Beach; W of",
+                "LATITUDE": 28.193,
+                "LONGITUDE": -82.867,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pasco"
+            },
+            "geometry": {
+                "x": -9224712.2436,
+                "y": 3273328.5370000005
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606103,
+                "HAB_ID": "HABW220425-008",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Lido Beach Casino",
+                "LATITUDE": 27.311,
+                "LONGITUDE": -82.57718,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192449.6287,
+                "y": 3162381.1110000014
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606104,
+                "HAB_ID": "HABW220426-023",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Anclote Key; SE of",
+                "LATITUDE": 28.15,
+                "LONGITUDE": -82.824,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9219925.5055,
+                "y": 3267898.554299999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606105,
+                "HAB_ID": "HABW220426-024",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Anclote Key Lighthouse; 1.7 mi SW of",
+                "LATITUDE": 28.149,
+                "LONGITUDE": -82.863,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9224266.9656,
+                "y": 3267772.3016000018
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606106,
+                "HAB_ID": "HABW220425-021",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Bay Dock (Sarasota Bay)",
+                "LATITUDE": 27.3316,
+                "LONGITUDE": -82.5779,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192529.7788,
+                "y": 3164962.224300001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606107,
+                "HAB_ID": "HABW220426-004",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Captiva Rocks; SW of (Pine Island Sound)",
+                "LATITUDE": 26.59925,
+                "LONGITUDE": -82.18463,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9148751.1626,
+                "y": 3073491.9321999997
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606108,
+                "HAB_ID": "HABW220426-007",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Barefoot Beach State Preserve",
+                "LATITUDE": 26.30481,
+                "LONGITUDE": -81.8362,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9109964.1125,
+                "y": 3036882.208299998
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606109,
+                "HAB_ID": "HABW220425-031",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Wallace Cove (Boca Ciega Bay)",
+                "LATITUDE": 27.7117,
+                "LONGITUDE": -82.69014,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9205024.2784,
+                "y": 3212674.139800001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606110,
+                "HAB_ID": "HABW220426-010",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Naples Pier",
+                "LATITUDE": 26.1316,
+                "LONGITUDE": -81.8067,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9106680.1875,
+                "y": 3015389.3176999986
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606111,
+                "HAB_ID": "HABW220425-034",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Johns Pass; 12 mi W of",
+                "LATITUDE": 27.7825,
+                "LONGITUDE": -82.9827,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9237591.9087,
+                "y": 3221579.587200001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606112,
+                "HAB_ID": "HABW220425-026",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Longboat Pass (Sarasota Bay)",
+                "LATITUDE": 27.4461,
+                "LONGITUDE": -82.688,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9204786.0547,
+                "y": 3179317.4606
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606113,
+                "HAB_ID": "HABW220425-015",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Service Club Park",
+                "LATITUDE": 27.07827,
+                "LONGITUDE": -82.45286,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9178610.3896,
+                "y": 3133253.9591999985
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606114,
+                "HAB_ID": "HABW220426-003",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Captiva Pass",
+                "LATITUDE": 26.6092,
+                "LONGITUDE": -82.221,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9152799.8525,
+                "y": 3074730.7228000015
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606115,
+                "HAB_ID": "HABW220425-028",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Clearwater Pass",
+                "LATITUDE": 27.96035,
+                "LONGITUDE": -82.8243,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9219958.9013,
+                "y": 3243975.7509000003
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606116,
+                "HAB_ID": "HABW220425-024",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Fletcher Point (Lower Tampa Bay)",
+                "LATITUDE": 27.58512,
+                "LONGITUDE": -82.61482,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9196639.6944,
+                "y": 3196766.8948
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606117,
+                "HAB_ID": "HABW220425-030",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Mullet Key; Gulf Pier",
+                "LATITUDE": 27.6133,
+                "LONGITUDE": -82.7391,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9210474.4807,
+                "y": 3200306.6691000015
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606118,
+                "HAB_ID": "HABW220425-004",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "FWRI Peninsula; SE tip of (Bayboro Harbor)",
+                "LATITUDE": 27.759803,
+                "LONGITUDE": -82.631267,
+                "SAMPLE_DEPTH": 5.0,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9198470.566,
+                "y": 3218724.0562999994
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606119,
+                "HAB_ID": "HABW220425-009",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "South Lido Park",
+                "LATITUDE": 27.29818,
+                "LONGITUDE": -82.56739,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9191359.8109,
+                "y": 3160775.0483999997
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606120,
+                "HAB_ID": "HABW220425-022",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "New Pass Dock (Sarasota Bay)",
+                "LATITUDE": 27.33375,
+                "LONGITUDE": -82.57938,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192694.5316,
+                "y": 3165231.6400000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606121,
+                "HAB_ID": "HABW220426-002",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Mondongo Island; W of (Pine Island Sound)",
+                "LATITUDE": 26.6798,
+                "LONGITUDE": -82.2196,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9152644.0052,
+                "y": 3083523.6319999993
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606122,
+                "HAB_ID": "HABW220426-036",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Atlas Street; W of",
+                "LATITUDE": 27.4003,
+                "LONGITUDE": -82.6515,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9200722.8933,
+                "y": 3173573.5821
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606123,
+                "HAB_ID": "HABW220426-020",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Pensacola Beach Pier",
+                "LATITUDE": 30.3273,
+                "LONGITUDE": -87.1419,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Escambia"
+            },
+            "geometry": {
+                "x": -9700591.9348,
+                "y": 3545690.967
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606124,
+                "HAB_ID": "HABW220425-013",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "North Jetty",
+                "LATITUDE": 27.11382,
+                "LONGITUDE": -82.46883,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9180388.1619,
+                "y": 3137699.2650999986
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606125,
+                "HAB_ID": "HABW220426-015",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Regla Island; W of (Pine Island Sound)",
+                "LATITUDE": 26.538,
+                "LONGITUDE": -82.1257,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9142191.105,
+                "y": 3065868.581700001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606126,
+                "HAB_ID": "HABW220425-029",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "La Contessa Pier",
+                "LATITUDE": 27.8121,
+                "LONGITUDE": -82.81915,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9219385.6059,
+                "y": 3225304.4866000004
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606127,
+                "HAB_ID": "HABW220426-033",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Deerfield Beach Fishing Pier",
+                "LATITUDE": 26.316484,
+                "LONGITUDE": -80.07265,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Broward"
+            },
+            "geometry": {
+                "x": -8913646.6245,
+                "y": 3038331.938099999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606128,
+                "HAB_ID": "HABW220425-020",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Blind Pass Beach",
+                "LATITUDE": 26.96324,
+                "LONGITUDE": -82.38565,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9171128.6067,
+                "y": 3118879.8231000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606129,
+                "HAB_ID": "HABW220426-038",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Marina Jack (Sarasota Bay)",
+                "LATITUDE": 27.3324,
+                "LONGITUDE": -82.5462,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9189000.9509,
+                "y": 3165062.4714
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606130,
+                "HAB_ID": "HABW220426-014",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "York Island; W of (Pine Island Sound)",
+                "LATITUDE": 26.4887,
+                "LONGITUDE": -82.1073,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9140142.8264,
+                "y": 3059735.518599998
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606131,
+                "HAB_ID": "HABW220425-032",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Via Cipriani; dock S of (Old Tampa Bay)",
+                "LATITUDE": 27.94067,
+                "LONGITUDE": -82.7225,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9208626.5771,
+                "y": 3241495.6911999993
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606132,
+                "HAB_ID": "HABW220425-017",
+                "SampleDate_t": "Apr 25 2022 ",
+                "LOCATION": "Brohard Beach",
+                "LATITUDE": 27.06631,
+                "LONGITUDE": -82.448,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9178069.3769,
+                "y": 3131758.752799999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606133,
+                "HAB_ID": "HABW220426-050",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "High Point; 2 mi NE of (Old Tampa Bay)",
+                "LATITUDE": 27.942,
+                "LONGITUDE": -82.675,
+                "SAMPLE_DEPTH": 4.0,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9203338.9013,
+                "y": 3241663.2826000005
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606134,
+                "HAB_ID": "HABW220426-052",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Big Island; 2.2 mi E of (Old Tampa Bay)",
+                "LATITUDE": 27.9055,
+                "LONGITUDE": -82.6046,
+                "SAMPLE_DEPTH": 2.6,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9195502.0092,
+                "y": 3237064.717500001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606135,
+                "HAB_ID": "HABW220426-044",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Cooper Point; E of (Old Tampa Bay)",
+                "LATITUDE": 27.972,
+                "LONGITUDE": -82.673,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9203116.2624,
+                "y": 3245444.0887
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606136,
+                "HAB_ID": "HABW220426-054",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Weedon Island; E of (Old Tampa Bay)",
+                "LATITUDE": 27.86111,
+                "LONGITUDE": -82.58911,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9193777.6703,
+                "y": 3231474.1964000016
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606137,
+                "HAB_ID": "HABW220428-021",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Lighthouse Beach",
+                "LATITUDE": 26.4512,
+                "LONGITUDE": -82.0151,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9129879.1694,
+                "y": 3055072.1706999987
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606138,
+                "HAB_ID": "HABW220426-043",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Philippe Park; NE of (Safety Harbor)",
+                "LATITUDE": 28.02,
+                "LONGITUDE": -82.675,
+                "SAMPLE_DEPTH": 2.9,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9203338.9013,
+                "y": 3251495.5661999993
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606139,
+                "HAB_ID": "HABW220426-042",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Philippe Park; NE of (Safety Harbor)",
+                "LATITUDE": 28.02,
+                "LONGITUDE": -82.675,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9203338.9013,
+                "y": 3251495.5661999993
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606140,
+                "HAB_ID": "HABW220426-051",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Big Island; 2.2 mi E of (Old Tampa Bay)",
+                "LATITUDE": 27.9055,
+                "LONGITUDE": -82.6046,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9195502.0092,
+                "y": 3237064.717500001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606141,
+                "HAB_ID": "HABW220426-045",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Old Tampa Bay Park; 1.7 mi S of (Old Tampa Bay)",
+                "LATITUDE": 27.98,
+                "LONGITUDE": -82.62,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Hillsborough"
+            },
+            "geometry": {
+                "x": -9197216.3293,
+                "y": 3246452.4811000004
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606142,
+                "HAB_ID": "HABW220426-027",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "New Pass Dock (Sarasota Bay)",
+                "LATITUDE": 27.33375,
+                "LONGITUDE": -82.57938,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192694.5316,
+                "y": 3165231.6400000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606143,
+                "HAB_ID": "HABW220426-047",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "C. Campbell Causeway; S of (Old Tampa Bay)",
+                "LATITUDE": 27.957,
+                "LONGITUDE": -82.622,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Hillsborough"
+            },
+            "geometry": {
+                "x": -9197438.9683,
+                "y": 3243553.554299999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606144,
+                "HAB_ID": "HABW220426-046",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Howard Frankland Bridge; N of (Old Tampa Bay)",
+                "LATITUDE": 27.949,
+                "LONGITUDE": -82.561,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Hillsborough"
+            },
+            "geometry": {
+                "x": -9190648.4794,
+                "y": 3242545.376699999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606145,
+                "HAB_ID": "HABW220427-005",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Ballyshannon Street; E of",
+                "LATITUDE": 28.0164,
+                "LONGITUDE": -80.532,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8964781.2326,
+                "y": 3251041.6118
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606146,
+                "HAB_ID": "HABW220427-003",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Caxambas Pass; 15 mi W of",
+                "LATITUDE": 25.9085,
+                "LONGITUDE": -81.9623,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9124001.5002,
+                "y": 2987752.6831
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606147,
+                "HAB_ID": "HABW220426-025",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Bay Dock (Sarasota Bay)",
+                "LATITUDE": 27.3316,
+                "LONGITUDE": -82.5779,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192529.7788,
+                "y": 3164962.224300001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606148,
+                "HAB_ID": "HABW220428-020",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Tarpon Bay Road Beach",
+                "LATITUDE": 26.4217,
+                "LONGITUDE": -82.0801,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9137114.9363,
+                "y": 3051404.737399999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606149,
+                "HAB_ID": "HABW220427-006",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Macfarlane Street; W of (Indian River)",
+                "LATITUDE": 28.015,
+                "LONGITUDE": -80.5387,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8965527.0732,
+                "y": 3250865.0780999996
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606150,
+                "HAB_ID": "HABW220427-004",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Marco Island; 7.2 mi NW of",
+                "LATITUDE": 25.9997,
+                "LONGITUDE": -81.8594,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9112546.7246,
+                "y": 2999043.7872
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606151,
+                "HAB_ID": "HABW220428-019",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Alison Hagerup Beach Park",
+                "LATITUDE": 26.5264,
+                "LONGITUDE": -82.1945,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9149849.886,
+                "y": 3064425.2710999995
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606152,
+                "HAB_ID": "HABW220426-049",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "High Point; 2 mi NE of (Old Tampa Bay)",
+                "LATITUDE": 27.942,
+                "LONGITUDE": -82.675,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9203338.9013,
+                "y": 3241663.2826000005
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606153,
+                "HAB_ID": "HABW220426-053",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "San Jose St; W of (Old Tampa Bay)",
+                "LATITUDE": 27.9244,
+                "LONGITUDE": -82.5496,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Hillsborough"
+            },
+            "geometry": {
+                "x": -9189379.4372,
+                "y": 3239445.6985
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606154,
+                "HAB_ID": "HABW220426-055",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "Snell Isle; 2.3 mi SE of (Middle Tampa Bay)",
+                "LATITUDE": 27.7723,
+                "LONGITUDE": -82.5789,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9192641.0983,
+                "y": 3220296.2419000007
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606155,
+                "HAB_ID": "HABW220426-048",
+                "SampleDate_t": "Apr 26 2022 ",
+                "LOCATION": "C. Campbell Causeway; S of (Old Tampa Bay)",
+                "LATITUDE": 27.957,
+                "LONGITUDE": -82.622,
+                "SAMPLE_DEPTH": 4.9,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Hillsborough"
+            },
+            "geometry": {
+                "x": -9197438.9683,
+                "y": 3243553.554299999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606156,
+                "HAB_ID": "HABW220427-010",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Lassing Park (Middle Tampa Bay)",
+                "LATITUDE": 27.751594,
+                "LONGITUDE": -82.629925,
+                "SAMPLE_DEPTH": 0.3,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9198321.1753,
+                "y": 3217691.421
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606157,
+                "HAB_ID": "HABW220428-032",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Barefoot Beach; 24 mi W of",
+                "LATITUDE": 26.306017,
+                "LONGITUDE": -82.2196,
+                "SAMPLE_DEPTH": 12.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9152644.0052,
+                "y": 3037032.0922
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606158,
+                "HAB_ID": "HABW220428-006",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Port St. John Boat Ramp (Indian River)",
+                "LATITUDE": 28.475083,
+                "LONGITUDE": -80.766533,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8990889.3267,
+                "y": 3309004.0036000013
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606159,
+                "HAB_ID": "HABW220428-004",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Parrish Park Boat Ramp (Indian River)",
+                "LATITUDE": 28.62365,
+                "LONGITUDE": -80.795517,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8994115.8108,
+                "y": 3327831.762699999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606160,
+                "HAB_ID": "HABW220429-014",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "8th Street Dock (Daughtry Bayou)",
+                "LATITUDE": 29.138056,
+                "LONGITUDE": -83.039866,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Levy"
+            },
+            "geometry": {
+                "x": -9243955.5987,
+                "y": 3393229.2321999967
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606161,
+                "HAB_ID": "HABW220428-023",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Lovers Key State Park",
+                "LATITUDE": 26.39,
+                "LONGITUDE": -81.88,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9114839.9062,
+                "y": 3047464.8462999985
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606162,
+                "HAB_ID": "HABW220428-001",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Military Point; W of (East Bay)",
+                "LATITUDE": 30.124111,
+                "LONGITUDE": -85.631,
+                "SAMPLE_DEPTH": 0.3,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Bay"
+            },
+            "geometry": {
+                "x": -9532399.3161,
+                "y": 3519513.1520000026
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606163,
+                "HAB_ID": "HABW220428-007",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Kelly Park (Banana River)",
+                "LATITUDE": 28.4017,
+                "LONGITUDE": -80.66245,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8979302.8601,
+                "y": 3299714.019200001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606164,
+                "HAB_ID": "HABW220429-006",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Stump Pass; 3.4 mi W of",
+                "LATITUDE": 26.8952,
+                "LONGITUDE": -82.3966,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Charlotte"
+            },
+            "geometry": {
+                "x": -9172347.5551,
+                "y": 3110384.464299999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606165,
+                "HAB_ID": "HABW220428-013",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Anna Maria Island; 44 mi W of",
+                "LATITUDE": 27.489,
+                "LONGITUDE": -83.417,
+                "SAMPLE_DEPTH": 38.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9285937.9635,
+                "y": 3184699.8068999983
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606166,
+                "HAB_ID": "HABW220428-025",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Hawksbill Island Drive; canal E of (Banana River)",
+                "LATITUDE": 28.198262,
+                "LONGITUDE": -80.612495,
+                "SAMPLE_DEPTH": 0.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8973741.895,
+                "y": 3273993.1653000005
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606167,
+                "HAB_ID": "HABW220428-022",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Lynn Hall Park",
+                "LATITUDE": 26.4535,
+                "LONGITUDE": -81.9582,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9123545.0903,
+                "y": 3055358.1455999985
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606168,
+                "HAB_ID": "HABW220428-010",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Eau Gallie Pier (Indian River)",
+                "LATITUDE": 28.13248,
+                "LONGITUDE": -80.62418,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8975042.6632,
+                "y": 3265686.777399998
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606169,
+                "HAB_ID": "HABW220428-015",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "New Pass; 47 mi W of",
+                "LATITUDE": 27.33,
+                "LONGITUDE": -83.359,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9279481.433,
+                "y": 3164761.7322999984
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606170,
+                "HAB_ID": "HABW220428-003",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Blind Alligator Bayou; E of (East Bay)",
+                "LATITUDE": 30.037694,
+                "LONGITUDE": -85.496111,
+                "SAMPLE_DEPTH": 0.3,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Bay"
+            },
+            "geometry": {
+                "x": -9517383.5413,
+                "y": 3508395.976499997
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606171,
+                "HAB_ID": "HABW220428-011",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Geiger Point; Melbourne Causeway at (Indian River)",
+                "LATITUDE": 28.08245,
+                "LONGITUDE": -80.59505,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8971799.9265,
+                "y": 3259372.8308000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606172,
+                "HAB_ID": "HABW220429-007",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Gasparilla Pass; 15 mi W of",
+                "LATITUDE": 26.8165,
+                "LONGITUDE": -82.5259,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Charlotte"
+            },
+            "geometry": {
+                "x": -9186741.1653,
+                "y": 3100564.4952999987
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606173,
+                "HAB_ID": "HABW220428-012",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Anna Maria Island; 44 mi W of",
+                "LATITUDE": 27.489,
+                "LONGITUDE": -83.417,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9285937.9635,
+                "y": 3184699.8068999983
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606174,
+                "HAB_ID": "HABW220428-026",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Juno Beach Fishing Pier",
+                "LATITUDE": 26.893715,
+                "LONGITUDE": -80.0542,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Palm Beach"
+            },
+            "geometry": {
+                "x": -8911592.7799,
+                "y": 3110199.106800001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606175,
+                "HAB_ID": "HABW220429-001",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Brooks Bridge; W of (Santa Rosa Sound)",
+                "LATITUDE": 30.40075,
+                "LONGITUDE": -86.600833,
+                "SAMPLE_DEPTH": 0.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Okaloosa"
+            },
+            "geometry": {
+                "x": -9640360.6318,
+                "y": 3555167.2321999967
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606176,
+                "HAB_ID": "HABW220428-014",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Anna Maria Island; 44 mi W of",
+                "LATITUDE": 27.489,
+                "LONGITUDE": -83.417,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Manatee"
+            },
+            "geometry": {
+                "x": -9285937.9635,
+                "y": 3184699.8068999983
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606177,
+                "HAB_ID": "HABW220428-030",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Barefoot Beach; 24 mi W of",
+                "LATITUDE": 26.306017,
+                "LONGITUDE": -82.2196,
+                "SAMPLE_DEPTH": 0.8,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9152644.0052,
+                "y": 3037032.0922
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606178,
+                "HAB_ID": "HABW220428-028",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Sanibel Island; 15 mi W of",
+                "LATITUDE": 26.412883,
+                "LONGITUDE": -82.409533,
+                "SAMPLE_DEPTH": 9.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9173787.2501,
+                "y": 3050308.792199999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606179,
+                "HAB_ID": "HABW220427-001",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Bay Dock (Sarasota Bay)",
+                "LATITUDE": 27.3316,
+                "LONGITUDE": -82.5779,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192529.7788,
+                "y": 3164962.224300001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606180,
+                "HAB_ID": "HABW220428-024",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Bonita Beach Park",
+                "LATITUDE": 26.331,
+                "LONGITUDE": -81.8462,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9111077.3074,
+                "y": 3040134.8040999994
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606181,
+                "HAB_ID": "HABW220427-002",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "New Pass Dock (Sarasota Bay)",
+                "LATITUDE": 27.33375,
+                "LONGITUDE": -82.57938,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192694.5316,
+                "y": 3165231.6400000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606182,
+                "HAB_ID": "HABW220428-029",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Sanibel Island; 15 mi W of",
+                "LATITUDE": 26.412883,
+                "LONGITUDE": -82.409533,
+                "SAMPLE_DEPTH": 18.3,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9173787.2501,
+                "y": 3050308.792199999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606183,
+                "HAB_ID": "HABW220429-002",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Eglin Beach Park; 1.7 mi S of",
+                "LATITUDE": 30.363083,
+                "LONGITUDE": -86.5343,
+                "SAMPLE_DEPTH": 0.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Okaloosa"
+            },
+            "geometry": {
+                "x": -9632954.2122,
+                "y": 3550306.677000001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606184,
+                "HAB_ID": "HABW220427-011",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Coquina Key Drive SE; E of (Middle Tampa Bay)",
+                "LATITUDE": 27.732275,
+                "LONGITUDE": -82.624806,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9197751.3308,
+                "y": 3215261.5315999985
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606185,
+                "HAB_ID": "HABW220428-009",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Ramp Road Park Boat Ramp (Banana River)",
+                "LATITUDE": 28.309033,
+                "LONGITUDE": -80.614283,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8973940.9342,
+                "y": 3287991.9459000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606186,
+                "HAB_ID": "HABW220429-013",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Boca Grande Pier (Gasparilla Sound)",
+                "LATITUDE": 26.80562,
+                "LONGITUDE": -82.27415,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Charlotte"
+            },
+            "geometry": {
+                "x": -9158716.4834,
+                "y": 3099207.4558999985
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606187,
+                "HAB_ID": "HABW220428-002",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Cedar Point; NE of (East Bay)",
+                "LATITUDE": 30.103611,
+                "LONGITUDE": -85.556528,
+                "SAMPLE_DEPTH": 0.3,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Bay"
+            },
+            "geometry": {
+                "x": -9524109.131,
+                "y": 3516875.0361
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606188,
+                "HAB_ID": "HABW220427-009",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Spa Beach (Middle Tampa Bay)",
+                "LATITUDE": 27.774646,
+                "LONGITUDE": -82.627026,
+                "SAMPLE_DEPTH": 0.3,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9197998.4601,
+                "y": 3220591.400699999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606189,
+                "HAB_ID": "HABW220428-016",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "New Pass; 47 mi W of",
+                "LATITUDE": 27.33,
+                "LONGITUDE": -83.359,
+                "SAMPLE_DEPTH": 39.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9279481.433,
+                "y": 3164761.7322999984
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606190,
+                "HAB_ID": "HABW220428-008",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "520 Slick Boat Ramp (Banana River)",
+                "LATITUDE": 28.357133,
+                "LONGITUDE": -80.62844,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8975516.8843,
+                "y": 3294075.161899999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606191,
+                "HAB_ID": "HABW220428-005",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "NASA Causeway; SE side of (Indian River)",
+                "LATITUDE": 28.52641,
+                "LONGITUDE": -80.7391,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Brevard"
+            },
+            "geometry": {
+                "x": -8987835.4991,
+                "y": 3315505.6251000017
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606192,
+                "HAB_ID": "HABW220429-010",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Mangrove Point; 2.2  mi W of (Charlotte Harbor)",
+                "LATITUDE": 26.8839,
+                "LONGITUDE": -82.125267,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Charlotte"
+            },
+            "geometry": {
+                "x": -9142142.9037,
+                "y": 3108974.0612999983
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606193,
+                "HAB_ID": "HABW220429-011",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Crow Key; 2.4 mi W of (Charlotte Harbor)",
+                "LATITUDE": 26.795883,
+                "LONGITUDE": -82.101517,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Charlotte"
+            },
+            "geometry": {
+                "x": -9139499.0658,
+                "y": 3097993.0907999985
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606194,
+                "HAB_ID": "HABW220428-027",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Sanibel Island; 15 mi W of",
+                "LATITUDE": 26.412883,
+                "LONGITUDE": -82.409533,
+                "SAMPLE_DEPTH": 1.0,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Lee"
+            },
+            "geometry": {
+                "x": -9173787.2501,
+                "y": 3050308.792199999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606195,
+                "HAB_ID": "HABW220428-031",
+                "SampleDate_t": "Apr 27 2022 ",
+                "LOCATION": "Barefoot Beach; 24 mi W of",
+                "LATITUDE": 26.306017,
+                "LONGITUDE": -82.2196,
+                "SAMPLE_DEPTH": 6.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9152644.0052,
+                "y": 3037032.0922
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606196,
+                "HAB_ID": "HABW220429-018",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Flower Avenue; S of (St. Andrew Bay)",
+                "LATITUDE": 30.1632,
+                "LONGITUDE": -85.6898,
+                "SAMPLE_DEPTH": 1.6,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Bay"
+            },
+            "geometry": {
+                "x": -9538944.9022,
+                "y": 3524544.9782999977
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606197,
+                "HAB_ID": "HABW220429-019",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Florida Avenue; N of (East Bay)",
+                "LATITUDE": 30.0965,
+                "LONGITUDE": -85.5932,
+                "SAMPLE_DEPTH": 2.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Bay"
+            },
+            "geometry": {
+                "x": -9528191.4394,
+                "y": 3515960.0593999997
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606198,
+                "HAB_ID": "HABW220429-009",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Pavilion Key; SW of",
+                "LATITUDE": 25.6817,
+                "LONGITUDE": -81.3579,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Monroe"
+            },
+            "geometry": {
+                "x": -9056720,
+                "y": 2959711.236200001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606199,
+                "HAB_ID": "HABW220429-003",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Gordon Pass; NW of",
+                "LATITUDE": 26.09655,
+                "LONGITUDE": -81.811083,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9107168.1008,
+                "y": 3011043.9968000017
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606200,
+                "HAB_ID": "HABW220428-018",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "New Pass Dock (Sarasota Bay)",
+                "LATITUDE": 27.33375,
+                "LONGITUDE": -82.57938,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192694.5316,
+                "y": 3165231.6400000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606201,
+                "HAB_ID": "HABW220428-017",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Bay Dock (Sarasota Bay)",
+                "LATITUDE": 27.3316,
+                "LONGITUDE": -82.5779,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192529.7788,
+                "y": 3164962.224300001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606202,
+                "HAB_ID": "HABW220429-017",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Tyndall AFB; W of (St. Andrew Bay)",
+                "LATITUDE": 30.0768,
+                "LONGITUDE": -85.6222,
+                "SAMPLE_DEPTH": 1.9,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Bay"
+            },
+            "geometry": {
+                "x": -9531419.7046,
+                "y": 3513425.5922000036
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606203,
+                "HAB_ID": "HABW220429-005",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Naples Pier; W of",
+                "LATITUDE": 26.131333,
+                "LONGITUDE": -81.811167,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Collier"
+            },
+            "geometry": {
+                "x": -9107177.4516,
+                "y": 3015356.2115
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606204,
+                "HAB_ID": "HABW220429-016",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Davis Point; SE of (St. Andrew Bay)",
+                "LATITUDE": 30.1133,
+                "LONGITUDE": -85.6812,
+                "SAMPLE_DEPTH": 1.3,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Bay"
+            },
+            "geometry": {
+                "x": -9537987.5546,
+                "y": 3518121.8315000013
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606205,
+                "HAB_ID": "HABW220429-008",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Pavilion Key; 9.2 mi SW of",
+                "LATITUDE": 25.6161,
+                "LONGITUDE": -81.4735,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Monroe"
+            },
+            "geometry": {
+                "x": -9069588.5331,
+                "y": 2951610.4536999986
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606206,
+                "HAB_ID": "HABW220429-012",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Englewood Beach",
+                "LATITUDE": 26.92467,
+                "LONGITUDE": -82.36189,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Charlotte"
+            },
+            "geometry": {
+                "x": -9168483.6556,
+                "y": 3114063.4092999995
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606207,
+                "HAB_ID": "HABW220429-015",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Goose Island; N of (North Bay)",
+                "LATITUDE": 30.2253,
+                "LONGITUDE": -85.6895,
+                "SAMPLE_DEPTH": 1.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Bay"
+            },
+            "geometry": {
+                "x": -9538911.5063,
+                "y": 3532543.0562999994
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606208,
+                "HAB_ID": "HABW220429-004",
+                "SampleDate_t": "Apr 28 2022 ",
+                "LOCATION": "Millender Street; S of (St. George Sound)",
+                "LATITUDE": 29.7301,
+                "LONGITUDE": -84.88478,
+                "SAMPLE_DEPTH": 0.1,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Franklin"
+            },
+            "geometry": {
+                "x": -9449330.4857,
+                "y": 3468903.6790999994
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606209,
+                "HAB_ID": "HABW220502-003",
+                "SampleDate_t": "Apr 29 2022 ",
+                "LOCATION": "Tom Stuart Causeway; N of (Boca Ciega Bay)",
+                "LATITUDE": 27.809,
+                "LONGITUDE": -82.794167,
+                "SAMPLE_DEPTH": 0.2,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9216604.5111,
+                "y": 3224914.3313000016
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606210,
+                "HAB_ID": "HABW220429-021",
+                "SampleDate_t": "Apr 29 2022 ",
+                "LOCATION": "New Pass Dock (Sarasota Bay)",
+                "LATITUDE": 27.33375,
+                "LONGITUDE": -82.57938,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192694.5316,
+                "y": 3165231.6400000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606211,
+                "HAB_ID": "HABW220429-020",
+                "SampleDate_t": "Apr 29 2022 ",
+                "LOCATION": "Bay Dock (Sarasota Bay)",
+                "LATITUDE": 27.3316,
+                "LONGITUDE": -82.5779,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192529.7788,
+                "y": 3164962.224300001
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606212,
+                "HAB_ID": "HABW220502-005",
+                "SampleDate_t": "Apr 30 2022 ",
+                "LOCATION": "Flagler Beach",
+                "LATITUDE": 29.4691,
+                "LONGITUDE": -81.1211,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Flagler"
+            },
+            "geometry": {
+                "x": -9030359.5446,
+                "y": 3435488.517999999
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606213,
+                "HAB_ID": "HABW220502-004",
+                "SampleDate_t": "Apr 30 2022 ",
+                "LOCATION": "Flagler Beach Bridge (Matanzas River)",
+                "LATITUDE": 29.4779,
+                "LONGITUDE": -81.1368,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Flagler"
+            },
+            "geometry": {
+                "x": -9032107.2606,
+                "y": 3436613.753700003
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606214,
+                "HAB_ID": "HABW220502-002",
+                "SampleDate_t": "May  2 2022 ",
+                "LOCATION": "FWRI Peninsula; SE tip of (Bayboro Harbor)",
+                "LATITUDE": 27.759803,
+                "LONGITUDE": -82.631267,
+                "SAMPLE_DEPTH": 6.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9198470.566,
+                "y": 3218724.0562999994
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606215,
+                "HAB_ID": "HABW220502-001",
+                "SampleDate_t": "May  2 2022 ",
+                "LOCATION": "FWRI Peninsula; SE tip of (Bayboro Harbor)",
+                "LATITUDE": 27.759803,
+                "LONGITUDE": -82.631267,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Pinellas"
+            },
+            "geometry": {
+                "x": -9198470.566,
+                "y": 3218724.0562999994
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606216,
+                "HAB_ID": "HABW220502-007",
+                "SampleDate_t": "May  2 2022 ",
+                "LOCATION": "New Pass Dock (Sarasota Bay)",
+                "LATITUDE": 27.33375,
+                "LONGITUDE": -82.57938,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192694.5316,
+                "y": 3165231.6400000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 606217,
+                "HAB_ID": "HABW220502-006",
+                "SampleDate_t": "May  2 2022 ",
+                "LOCATION": "Bay Dock (Sarasota Bay)",
+                "LATITUDE": 27.3316,
+                "LONGITUDE": -82.5779,
+                "SAMPLE_DEPTH": 0.5,
+                "Abundance": "not present/background (0-1,000)",
+                "ExportDate": 1651525207000,
+                "Source": "FWC-FWRI HAB Database",
+                "County": "Sarasota"
+            },
+            "geometry": {
+                "x": -9192529.7788,
+                "y": 3164962.224300001
+            }
+        }
+    ]
+}

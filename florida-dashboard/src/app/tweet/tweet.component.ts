@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Tweet } from '../interfaces/tweet';
+import { DatabaseApiService } from '../services/database-api.service';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-tweet',
@@ -7,28 +9,32 @@ import { Tweet } from '../interfaces/tweet';
     <!-- Display tweet text -->
     <p>
       {{ this.tweet.text }}
-
+      testing lol
     </p>
-
-    <div class="date">
-      {{ this.createdAtToDate(this.tweet.created_at)}}
-    </div>
     `,
   styleUrls: ['./tweet.component.css']
 })
 export class TweetComponent implements OnInit {
+  @Input()
+  tweet: Tweet;
+  data: any;
 
-  @Input() tweet: Tweet;
 
-  constructor() {
+  constructor(private database: DatabaseApiService) {
     this.tweet = {
-      '_id': '0',
-      'created_at': '0',
+      '_id': '1516885210868027392',
+      'created_at': '10/13/2020',
       'link': '',
       'text': 'ERROR: Tweet not found.',
-      'likes': 0,
-      'retweets': 0
+      'likes': 13,
+      'replies': 1500, 
+      'retweets': 2000
       }
+
+  }
+
+  getData(resp: HttpResponse<any>){
+    this.data = resp.body.body;
   }
 
   ngOnInit(): void {
