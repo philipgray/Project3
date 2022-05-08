@@ -5,10 +5,9 @@ import { Component } from '@angular/core';
   template:`
 	<!-- This anchor is just a reference to the top of the page -->
     <a id = 'home'></a>
-	<app-title-box></app-title-box>
 	
 	<div class="containercontainer">
-	
+	<app-title-box></app-title-box>
 	<div class="navbarorder">
     <!-- Navigation bar to stay at top of screen -->
     <app-navigation-bar></app-navigation-bar>
@@ -16,10 +15,6 @@ import { Component } from '@angular/core';
 
 	<div class="container">
     
-	<div class="title">
-	<p></p>
-	</div>
-	
 	<div class="text">
     <p>
       Red tide, a harmful algae bloom that regularly occurs on the coasts of Florida, creates toxic
@@ -31,9 +26,10 @@ import { Component } from '@angular/core';
 
 	<a id = 'twitter'></a>
     <!-- Put twitter content right under this anchor -->
+	<div class="twittercontainer">
     <app-bar-graph></app-bar-graph>
 	<app-tweet-list></app-tweet-list>
-
+</div>
     <!-- Put spotify content right under this anchor -->
 	<a id = 'spotify'></a>
 	<app-spotify-container></app-spotify-container>
