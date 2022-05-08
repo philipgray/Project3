@@ -2,7 +2,6 @@
 /* Make navigation bar stay on top of screen */
 app-navigation-bar {
   position: sticky;
-  top: 5px
 }
 
 
@@ -20,7 +19,7 @@ app-navigation-bar {
 	text-align: center;
 	font-size: 5px;
 	font-weight: bold;
-	background-color:#F9A
+	background-color: #FFF;
 }
 
 .containercontainer {
@@ -28,6 +27,8 @@ app-navigation-bar {
   height: 100%;
   position: relative;
   margin: 0px;
+  background-color:#905;
+  display: inline-block;
 }
 
 .navbarorder {
@@ -80,7 +81,7 @@ app-navigation-bar {
 }
 .float-child {
     width: 40%;
-    float: left;
+    float: center;
     padding: 15px;
 	margin: auto;
 }
@@ -93,9 +94,3 @@ app-navigation-bar {
 
 }
 
-.spotify {
-    width: 130%;
-    float: center;
-    padding: 20px;
-	margin: auto;
-}

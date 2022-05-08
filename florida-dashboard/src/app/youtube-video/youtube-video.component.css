@@ -1,6 +1,6 @@
 .youtube {
-    width: 40%;
-    float: center;
-    padding: auto;
-	margin: 20px;
+    width: 30%;
+    padding: 20px;
+	position: relative;
+	display: inline;
 }

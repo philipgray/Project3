@@ -1,7 +1,9 @@
 twittercontainer{
-	width: 40%;
-	text-align: right;
+	width: 30%;
+	text-align: center;
 	margin: 10px;
+	float: left;
+	
 }
 
 .title{

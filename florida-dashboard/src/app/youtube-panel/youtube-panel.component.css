@@ -1,12 +1,10 @@
 .youtube {
-    width: 40%;
-    float: center;
-    padding: auto;
+    width: 100%;
+	display: inline-block;
 	margin: 20px;
 }
-.youtube-right {
-    width: 40%;
-    float: center;
-    padding: auto;
-	margin: 20px;
+.title{
+	font-family: Rubik, Helvetica, sans-serif;
+	font-size: 20px;
+	text-align: center;
 }

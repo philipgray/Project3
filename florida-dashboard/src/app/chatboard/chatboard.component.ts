@@ -5,10 +5,6 @@ import { HttpResponse } from '@angular/common/http';
 @Component({
   selector: 'app-chatboard',
   template: `
-    <p>
-      chatboard works!
-    </p>
-	
 	<div class="chatboard-container">
 	<p>Red Tide Chatboard:</p>
 	<p class="subtext"> You can chat with people about red tide below.<p>

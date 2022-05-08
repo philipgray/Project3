@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
   template: `
   <div class="youtube">
     <!-- iframe with the youtube video -->
-    <iframe width="300" height="237"
+    <iframe width="300" height="168"
       [src]='this.videoSrc | safe'
       title="YouTube video player"
       frameborder="0"

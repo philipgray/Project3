@@ -6,16 +6,13 @@ import { DatabaseApiService } from '../services/database-api.service';
 @Component({
   selector: 'app-youtube-panel',
   template: `
+  
   <div class="youtube">
+  <div class="title"><p>Youtube Videos:<p></div>
     <app-youtube-video
       videoSrc="https://www.youtube.com/embed/{{trendingVideoId}}"> </app-youtube-video>
-	  <!-- </div> -->
-	<!-- <div class="youtube-right"> -->
     <app-youtube-video
       videoSrc="https://www.youtube.com/embed/{{symptomVideoId}}"> </app-youtube-video>
-	<!-- </div> -->
-
-  <!-- <div class="youtube-right"> -->
     <app-youtube-video
       videoSrc="https://www.youtube.com/embed/{{informationVideoId}}"> </app-youtube-video>
 	</div>

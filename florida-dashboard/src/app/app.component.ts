@@ -3,23 +3,23 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template:`
-  <!-- <app-test-box></app-test-box> -->
-  <a id = 'home'></a>
+	<!-- This anchor is just a reference to the top of the page -->
+    <a id = 'home'></a>
+	<app-title-box></app-title-box>
+	
 	<div class="containercontainer">
-
+	
 	<div class="navbarorder">
     <!-- Navigation bar to stay at top of screen -->
     <app-navigation-bar></app-navigation-bar>
 	</div>
 
 	<div class="container">
-    <!-- This anchor is just a reference to the top of the page -->
-
+    
 	<div class="title">
-	<p>Red Tide</p>
+	<p></p>
 	</div>
-
-
+	
 	<div class="text">
     <p>
       Red tide, a harmful algae bloom that regularly occurs on the coasts of Florida, creates toxic
@@ -30,42 +30,21 @@ import { Component } from '@angular/core';
 	</div>
 
 	<a id = 'twitter'></a>
-	<div>
     <!-- Put twitter content right under this anchor -->
-
-    <div>
-      <div class="float-child">
-        <app-bar-graph></app-bar-graph>
-
-        <!-- Spotify Here Temporarily -->
-        <a id = 'spotify'></a>
-	<div class="spotify">
-	<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/73Bxsi1UB4V8d9u4sDLu3O?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-	</div>
-	</div>
-
-	<div class="float-child-right">
-    <app-tweet-list></app-tweet-list>
-
-	</div>
-
-	</div>
-
-    <!-- Put youtube content right under this anchor -->
-
-	</div>
-	<div>
-    <a id = 'youtube'></a>
-    <app-youtube-panel></app-youtube-panel>
-	</div>
-
+    <app-bar-graph></app-bar-graph>
+	<app-tweet-list></app-tweet-list>
 
     <!-- Put spotify content right under this anchor -->
-
-
+	<a id = 'spotify'></a>
+	<app-spotify-container></app-spotify-container>
 	<app-sensordata></app-sensordata>
-    <!-- Put spotify content right under this anchor -->
+	
+	<!-- Put youtube content right under this anchor -->
+	<a id = 'youtube'></a>
+    <app-youtube-panel></app-youtube-panel>
+
 	<app-chatboard></app-chatboard>
+	
 	</div>
 
 	</div>
