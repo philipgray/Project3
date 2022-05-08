@@ -1,7 +1,9 @@
 .youtube {
     width: 100%;
 	display: inline-block;
-	margin: 20px;
+	margin: auto;
+	margin-bottom: 30px;
+	float: center;
 }
 .title{
 	font-family: Rubik, Helvetica, sans-serif;
