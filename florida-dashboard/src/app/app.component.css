@@ -21,6 +21,7 @@ app-navigation-bar {
 	background-color: #FFF;
 	bottom: -0px;
 	padding-top: 10px;
+	padding-bottom: 30px;
 
 }
 
@@ -29,6 +30,7 @@ app-navigation-bar {
 	float: left;
 	margin: auto;
 	width: 50%;
+	margin-right: 20px;
 }
 
 .containercontainer {
@@ -38,6 +40,7 @@ app-navigation-bar {
   float: center;
   //border: 3px solid #005;
   background-color: #905;
+  padding-bottom: 30px;
 }
 
 .navbarorder {
