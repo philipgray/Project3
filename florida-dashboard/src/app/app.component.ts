@@ -23,17 +23,22 @@ import { Component } from '@angular/core';
       of updated information to help you stay up-to-date on the current status of red tide in Florida.
     </p>
 	</div>
-
+	<div class="leftrightcontainercontainer">
 	<a id = 'twitter'></a>
     <!-- Put twitter content right under this anchor -->
-	<div class="twittercontainer">
+	<div class="leftcontainer">
     <app-bar-graph></app-bar-graph>
 	<app-tweet-list></app-tweet-list>
-</div>
+	</div>
+	
     <!-- Put spotify content right under this anchor -->
 	<a id = 'spotify'></a>
+	
+	<div class="rightcontainer">
 	<app-spotify-container></app-spotify-container>
 	<app-sensordata></app-sensordata>
+	</div>
+	</div>
 	
 	<!-- Put youtube content right under this anchor -->
 	<a id = 'youtube'></a>
