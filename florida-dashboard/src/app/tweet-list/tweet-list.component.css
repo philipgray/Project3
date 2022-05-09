@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-twittercontainer{
-	width: 30%;
-	text-align: center;
-	margin: auto;
-	float: left;
-	
-=======
 .twitter-container{
 	margin: 10px;
 	font-size: 16px;
->>>>>>> 63bfb73 (the text box looking goodgit add .)
+	float: left;
+	
 }
 
 .title{
