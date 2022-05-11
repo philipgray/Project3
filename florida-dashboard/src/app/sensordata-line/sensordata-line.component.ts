@@ -5,7 +5,8 @@ import { Component, Input, OnInit, Output } from '@angular/core';
   template: `
     <p class='line'
     title={{level}}>
-  | {{date}} | {{location}} | {{level}} | {{source}} |
+    {{location}}
+    {{level}}
     </p>
   `,
   styleUrls: ['./sensordata-line.component.css']

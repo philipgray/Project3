@@ -15,6 +15,9 @@ import { DatabaseApiService } from '../services/database-api.service';
       title="Total Tweets about red tide over time"
       [type]="this.chartType"
       [data]="this.tweetFrequency"
+      [width]="this.myWidth"
+      [height]="this.myWidth"
+      [dynamicResize]=true
 
       ></google-chart>
 	  </div>
@@ -25,7 +28,8 @@ export class BarGraphComponent implements OnInit {
 
   chartType = ChartType.ColumnChart;
 
-  tweetFrequency = []
+  myWidth = 80;
+  tweetFrequency = [];
 
   constructor(private database: DatabaseApiService) { }
 
