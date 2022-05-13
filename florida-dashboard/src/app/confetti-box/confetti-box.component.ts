@@ -14,7 +14,8 @@ import JSConfetti from 'js-confetti'
     <div class = 'box'>
       Join
       <input
-        (change)='checkAnswer( getValue($event) )'>
+        (change)='checkAnswer( getValue($event) )'
+        (keyup)='checkAnswer( getValue($event) )'>
       Club
     </div>
   `,

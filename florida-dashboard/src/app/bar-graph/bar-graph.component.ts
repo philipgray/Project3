@@ -16,7 +16,7 @@ import { DatabaseApiService } from '../services/database-api.service';
       [type]="this.chartType"
       [data]="this.tweetFrequency"
       [width]="this.myWidth"
-      [height]="this.myWidth"
+      [height]="this.myHeight"
       [dynamicResize]=true
 
       ></google-chart>
@@ -28,7 +28,8 @@ export class BarGraphComponent implements OnInit {
 
   chartType = ChartType.ColumnChart;
 
-  myWidth = 80;
+  myWidth = 700;
+  myHeight = 500;
   tweetFrequency = [];
 
   constructor(private database: DatabaseApiService) { }
