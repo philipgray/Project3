@@ -29,7 +29,7 @@ export class DatabaseApiService {
     })
   }
 
-  testNewApi(){
+  getTweets(){
 
     return fetch(this.backendApiEndpoint + '/api/v1/redtide/tweets/all', {
       method: 'GET',

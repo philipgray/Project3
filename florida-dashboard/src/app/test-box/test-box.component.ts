@@ -75,7 +75,7 @@ export class TestBoxComponent implements OnInit {
 
   testShowDataFetch(){
 
-    this.database.testNewApi()
+    // this.database.testNewApi()
 
     this.database.getMessages()
       .then(
