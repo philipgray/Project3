@@ -11,16 +11,16 @@ import { Fakemessagedata } from '../interfaces/fakemessagedata';
 	<p>Red Tide Chatboard:</p>
 	<p class="subtext"> You can chat with people about red tide below.<p>
 	<div class="message-container">
-
+	
 	<div *ngFor="let Fakemessagedata of values;">
 		<div class="message">
 	<p>
-
+      
       {{Fakemessagedata.text}}
     </p>
 	<div class="name">
 	<p>
-	Name: {{Fakemessagedata.name}}
+	Name: {{Fakemessagedata.name}} 
 	</p>
 	<p>
 	Location: {{Fakemessagedata.location}}
@@ -28,7 +28,7 @@ import { Fakemessagedata } from '../interfaces/fakemessagedata';
 	</div>
 	</div>
 	</div>
-
+	
 	<app-chatboard-message index=0>
 	</app-chatboard-message>
 	<app-chatboard-message index=1>
@@ -49,7 +49,7 @@ import { Fakemessagedata } from '../interfaces/fakemessagedata';
 	</app-chatboard-message>
 	<app-chatboard-message index=9>
 	</app-chatboard-message>
-
+	
 	</div>
 	<div class="textboxes">
 	<p>
@@ -64,7 +64,7 @@ import { Fakemessagedata } from '../interfaces/fakemessagedata';
 	Name:
 	</p>
 	<input type="text" id="3" #name id="c">
-
+	
 	<button (click)="getValues(text.value, location.value, name.value)">Send</button>
 	</div>
 	<div>
@@ -80,29 +80,29 @@ export class ChatboardComponent implements OnInit {
 	body2: any;
 	text: string = '';
 	jsonvalues: any;
-
+	
 	values: Fakemessagedata[] = [];
 
 	getValues(text:string, location:string, name:string){
 		this.values.push({'text': text, 'location': location, 'name': name});
-		window.location.reload();
+		//window.location.reload();
 		console.log(this.values);
-		fetch("http://34.228.160.243:3000/messages/send?name="+name+"&location="+location+"&message="+text);
+		fetch("http://localhost:5000/messages/send?name="+name+"&location="+location+"&message="+text);
 	}
 
 
+	
 
-
-  constructor(private database: DatabaseApiService) {
+  constructor(private database: DatabaseApiService) { 
   this.database.getMessages()
     .then( (response) => (response.json()))
     .then( (json) => {
 	this.jsonvalues = json;
-
+	  
 	  this.body1 = json[1].message;
 	  this.body2 = json[2].message;
     });}
-
+	
 
   ngOnInit(): void {
   }
