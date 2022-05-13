@@ -1,12 +1,12 @@
-twittercontainer{
-	width: 40%;
-	text-align: right;
+.twitter-container{
 	margin: 10px;
+	font-size: 16px;
+	float: left;
+	
 }
 
 .title{
 	text-align: center;
 	font-family: Rubik, Helvetica, sans-serif;
-	font-size: 16px;
-	
+	font-size: 20px;
 }

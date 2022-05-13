@@ -18,6 +18,9 @@ import { ChatboardComponent } from './chatboard/chatboard.component';
 import { ChatboardMessageComponent } from './chatboard-message/chatboard-message.component';
 import { SensordataComponent } from './sensordata/sensordata.component';
 import { SensordataLineComponent } from './sensordata-line/sensordata-line.component';
+import { TitleBoxComponent } from './title-box/title-box.component';
+import { SpotifyContainerComponent } from './spotify-container/spotify-container.component';
+import { ConfettiBoxComponent } from './confetti-box/confetti-box.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { SensordataLineComponent } from './sensordata-line/sensordata-line.compo
     ChatboardMessageComponent,
     SensordataComponent,
     SensordataLineComponent,
+    TitleBoxComponent,
+    SpotifyContainerComponent,
+    ConfettiBoxComponent,
   ],
   imports: [
     BrowserModule,

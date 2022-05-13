@@ -1,3 +1,26 @@
+"""
+api.py, our wonderful flask backend.
+
+For each request that is made, makes a request to our backend, and then returns that request as a json (assuming it's a
+valid request)
+
+For a quick and dirty rundown of how to create an endpoint, do the following:
+
+First you must define the @app.route, which is basically the address that you want to setup the endpoint on.
+
+For example, '/api/v1/redtide/tweets/all' will actually be http://<ourwebsite>.com/api/v1/redtide/tweets/all on the web.
+You can also add an additional parameter, "methods=" which will be used to define what kind of messages the endpoint
+can receive, such as POST or GET. i.e. methods=['GET']
+
+
+Then we need to add @cross_origin, so another site, our front end for example, can make a request of our endpoints.
+
+Next you'll define a function, where you'll basically do all the heavy lifting.
+
+For inputs, such as a limit on how many tweets we pull, you would use the check to see if 'limit' in requests.args,
+and for future notice, you can get an unlimited number of
+"""
+
 import configparser
 import certifi
 import flask
@@ -5,7 +28,7 @@ import flask
 import time
 from pymongo import MongoClient
 
-from flask import request, jsonify
+from flask import request, jsonify, redirect
 from flask_pymongo import PyMongo
 from flask_cors import CORS, cross_origin
 
@@ -29,8 +52,12 @@ client = MongoClient(cs, tlsCAFile=ca)
 
 @app.route('/')
 def home():
-    return "welcome"
+    """
+    Redirect sends the person to a different URL, and in this case to the climbing club website :)
 
+    - PG
+    """
+    return redirect("https://climbncf.github.io/")
 
 @app.route('/api/v1/redtide/tweets/all', methods=['GET'])
 @cross_origin()
@@ -38,7 +65,9 @@ def api_all_tweets():
     """
     This method is used for getting and returning all tweets in our mongoDB.
     We use find() to get the tweets, and then we use sort().
-    Sort uses the tweet id (_id) and displays it from the newest to the oldest.
+    Sort uses the tweet id (_id) and displays it from the newest to the oldest thanks to the -1.
+
+    - PG
     """
     tweets = mongo.db.tweets.find().sort([('_id', -1)])
     results = []
@@ -64,9 +93,11 @@ def api_historical_tweet_frequency():
 @cross_origin()
 def api_all_messages():
     """
-    This method is used for getting and returning all tweets in our mongoDB.
+    This method is used for getting and returning all messages in our mongoDB.
     We use find() to get the tweets, and then we use sort().
     Sort uses the tweet id (_id) and displays it from the newest to the oldest.
+
+    - FW
     """
     messages = mongo.db.messages.find().sort([('_id', -1)])
     results = []
@@ -140,6 +171,13 @@ def api_tweets():
     We use find() to get the tweets, and then we use sort().
     Sort uses the tweet id (_id) and displays it from the newest to the oldest.
     We then use limit to the latest x tweets.
+
+    An example query would be:
+   "/api/v1/redtide/tweets?limit=5"
+
+    Which would request the five latest tweets added to the database.
+
+    - PG
     """
     if 'limit' in request.args:
         try:

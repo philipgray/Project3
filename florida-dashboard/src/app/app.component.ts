@@ -3,22 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template:`
-  <app-test-box></app-test-box>
-  <a id = 'home'></a>
-	<div class="containercontainer">
+	<!-- This anchor is just a reference to the top of the page -->
+    <a id = 'home'></a>
 
+
+
+	<div class="containercontainer">
+	<app-title-box></app-title-box>
 	<div class="navbarorder">
     <!-- Navigation bar to stay at top of screen -->
     <app-navigation-bar></app-navigation-bar>
 	</div>
 
 	<div class="container">
-    <!-- This anchor is just a reference to the top of the page -->
-
-	<div class="title">
-	<p>Red Tide</p>
-	</div>
-
 
 	<div class="text">
     <p>
@@ -28,50 +25,35 @@ import { Component } from '@angular/core';
       of updated information to help you stay up-to-date on the current status of red tide in Florida.
     </p>
 	</div>
-
+	<div class="leftrightcontainercontainer">
 	<a id = 'twitter'></a>
-	<a id = 'spotify'></a>
-	<div>
     <!-- Put twitter content right under this anchor -->
-
-	<div>
-	<div class="float-child">
-    <app-bar-graph></app-bar-graph>
-
-	<!-- Spotify Here Temporarily -->
-	<div class="spotify">
-	<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/73Bxsi1UB4V8d9u4sDLu3O?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-	</div>
-	</div>
-
-	<div class="float-child-right">
-    <app-tweet-list></app-tweet-list>
-
-	</div>
-
-	</div>
-
-    <!-- Put youtube content right under this anchor -->
-    <a id = 'youtube'></a>
-
-	</div>
-	<div>
-    <app-youtube-panel></app-youtube-panel>
-	</div>
-
-
-    <!-- Put spotify content right under this anchor -->
-
-
+	<div class="leftcontainer">
 	<app-sensordata></app-sensordata>
+	<app-tweet-list></app-tweet-list>
+	</div>
+
     <!-- Put spotify content right under this anchor -->
+	<a id = 'spotify'></a>
+
+	<div class="rightcontainer">
+	<app-spotify-container></app-spotify-container>
+    <app-bar-graph></app-bar-graph>
+	</div>
+	</div>
+
+	<!-- Put youtube content right under this anchor -->
+	<a id = 'youtube'></a>
+    <app-youtube-panel></app-youtube-panel>
+
 	<app-chatboard></app-chatboard>
-	</div>
 
 	</div>
 
+	</div>
 
 
+  <app-confetti-box></app-confetti-box>
   `,
   styleUrls: ['./app.component.css']
 })

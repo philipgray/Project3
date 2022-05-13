@@ -7,7 +7,7 @@ import { HttpResponse } from '@angular/common/http';
   template: `
 	<div class="message">
 	<p>
-      Message:
+      
       {{jsonvalues[newindex].message}}
     </p>
 	<div class="name">

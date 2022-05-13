@@ -6,18 +6,23 @@ import { DatabaseApiService } from '../services/database-api.service';
 @Component({
   selector: 'app-youtube-panel',
   template: `
-  <div class="youtube">
-    <app-youtube-video
-      videoSrc="https://www.youtube.com/embed/{{trendingVideoId}}"> </app-youtube-video>
-	  </div>
-	<div class="youtube-right">
-    <app-youtube-video
-      videoSrc="https://www.youtube.com/embed/{{symptomVideoId}}"> </app-youtube-video>
-	</div>
 
-  <div class="youtube-right">
+  <div class="youtube">
+    <div class="title"><p>Youtube Videos:<p></div>
+    <div class='youtube-box'>
     <app-youtube-video
-      videoSrc="https://www.youtube.com/embed/{{informationVideoId}}"> </app-youtube-video>
+        class='item'
+        videoSrc="https://www.youtube.com/embed/{{trendingVideoId}}"
+        videoDescription="Trending Red Tide Video (unverified source)"> </app-youtube-video>
+      <app-youtube-video
+        class='item'
+        videoSrc="https://www.youtube.com/embed/{{symptomVideoId}}"
+        videoDescription="Health Symptom Video (from Sarasota Memorial)"> </app-youtube-video>
+      <app-youtube-video
+        class='item'
+        videoSrc="https://www.youtube.com/embed/{{informationVideoId}}"
+        videoDescription="Informational Video (from Mote Marine Lab)"> </app-youtube-video>
+    </div>
 	</div>
   `,
   styleUrls: ['./youtube-panel.component.css']

@@ -5,14 +5,20 @@ import { Tweet } from '../interfaces/tweet';
   selector: 'app-tweet',
   template: `
     <!-- Display tweet text -->
-    <p>
-      {{ this.tweet.text }}
-
-    </p>
-
-    <div class="date">
-      {{ this.createdAtToDate(this.tweet.created_at)}}
+    <div class="tweet">
+      <div class="tweet-text">
+        <a target="_blank" href={{this.tweet.link}}>{{this.tweet.text}}</a>
+      </div>
+      <br>
+      <div class="tweet-stats">
+        <br>
+      Likes: {{this.tweet.likes}}
+      Retweets: {{this.tweet.retweets}}
+      Posted: {{ this.createdAtToDate(this.tweet.created_at)}}
+      </div>
     </div>
+
+    
     `,
   styleUrls: ['./tweet.component.css']
 })
@@ -26,6 +32,9 @@ export class TweetComponent implements OnInit {
       'created_at': '0',
       'link': '',
       'text': 'ERROR: Tweet not found.',
+      'replies': '10000',
+      'likes': '1',
+      'retweets': '999999'
       }
   }
 

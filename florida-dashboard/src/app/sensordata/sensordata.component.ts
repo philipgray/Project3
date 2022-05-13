@@ -5,28 +5,31 @@ import { DatabaseApiService } from '../services/database-api.service';
 @Component({
   selector: 'app-sensordata',
   template: `
-    <div class="container">
-	<p>| Date | Location | Level | Source |
+  <div class="container">
+    <div class="title">
+      <p> Sensor Data (Cell counts of red tide algae)
 
-  <!-- Dropdown to choose county -->
-  <select
-  (change)='filterCounty( getSelectValue($event) )' >
-    <option value = "All">All Counties</option>
+      <!-- Dropdown to choose county -->
+      <select
+      (change)='filterCounty( getSelectValue($event) )' >
+        <option value = "All">All Counties</option>
 
-    <option *ngFor='let county of availableCounties'
-    value = {{county}}>
-    {{county}}
-    </option>
+        <option *ngFor='let county of availableCounties'
+        value = {{county}}>
+        {{county}}
+        </option>
 
-  </select>
+      </select>
+    </div>
 
 
-  <app-sensordata-line *ngFor='let beachData of dataToShow'
-  [class]='beachData.abundance'
-  [date]='beachData.date'
-  [location]='beachData.location'
-  [level]='beachData.abundance'
-  [source]='beachData.source'  >  </app-sensordata-line>
+    <app-sensordata-line *ngFor='let beachData of dataToShow'
+      [class]='beachData.abundance'
+      [date]='beachData.date'
+      [location]='beachData.location'
+      [level]='beachData.abundance'
+      [source]='beachData.source'  >
+    </app-sensordata-line>
 
 
 	</div>

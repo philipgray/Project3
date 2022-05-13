@@ -8,7 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
   template: `
   <div class="youtube">
     <!-- iframe with the youtube video -->
-    <iframe width="300" height="237"
+    <div class='item'> {{videoDescription}}</div>
+    <iframe class='item'
+    width="300" height="168"
       [src]='this.videoSrc | safe'
       title="YouTube video player"
       frameborder="0"
@@ -21,6 +23,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class YoutubeVideoComponent implements OnInit {
 
   @Input() videoSrc = "";
+  @Input() videoDescription = "";
 
   constructor() { }
 

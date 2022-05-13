@@ -2,32 +2,65 @@
 /* Make navigation bar stay on top of screen */
 app-navigation-bar {
   position: sticky;
-  top: 5px
 }
 
 
 .container {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	z-index: 2;
-	bottom: 100px;
 	position: relative;
 	height: 100%;
 	margin: auto;
-	width: 75%;
-	border: 0px solid #905;
-	padding: 0px;
+	width: 95%;
+	//border: 0px solid #905;
+	//padding: 0px;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	font-size: 5px;
 	font-weight: bold;
-	background-color:#F9A
+	background-color: #FFF;
+	bottom: -0px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+
+}
+
+.leftcontainer{
+	display: relative;
+	float: center;
+	width: auto;
+	border: 3px dashed #005;
+}
+.rightcontainer{
+	display: relative;
+	float: right;
+	width: 40%;
+	border: 3px dashed #005;
+}
+.leftrightcontainercontainer{
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+	//flex-wrap: wrap;
+	float: center;
+	width: 90%;
+	margin: auto;
+	margin-top: 20px;
+	border: 3px dashed #005;
+	
 }
 
 .containercontainer {
-  width: 100%;
+  width: auto;
   height: 100%;
-  position: relative;
-  margin: 0px;
+  margin: 0;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: -8px;
+  margin-top: -8px;
+  //border: 3px solid #005;
+  background-color: #905;
+  padding-bottom: 30px;
 }
 
 .navbarorder {
@@ -54,14 +87,17 @@ app-navigation-bar {
 
 .text {
 	margin: auto;
+	margin-top: 20px;
 	width: 80%;
-	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 	border-radius: 10px;
-	border: 3px solid #905;
+	border: 2px solid #AAA;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: left;
 	font-size: 15px;
-	position: left;
+	float: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	font-weight: none;
 }
 
@@ -80,22 +116,16 @@ app-navigation-bar {
 }
 .float-child {
     width: 40%;
-    float: left;
+    float: center;
     padding: 15px;
 	margin: auto;
-}  
+}
 
 .float-child-right {
     width: 35%;
     float: right;
     padding: 35px;
 	margin: auto;
-	
-}  
 
-.spotify {
-    width: 130%;
-    float: center;
-    padding: 20px;
-	margin: auto;
-}  
+}
+

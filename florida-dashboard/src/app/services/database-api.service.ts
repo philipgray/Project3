@@ -10,7 +10,7 @@ import { Tweet } from '../interfaces/tweet';
 })
 export class DatabaseApiService {
 
-  private backendApiEndpoint = 'http://127.0.0.1:5000'
+  private backendApiEndpoint = 'http://34.228.160.243:3000'
 
   constructor(private http: HttpClient) { }
 
@@ -56,7 +56,7 @@ export class DatabaseApiService {
   }
 
   getMessages(): Promise<any>{
-    return fetch('http://127.0.0.1:5000/messages/all', {
+    return fetch(this.backendApiEndpoint + '/messages/all', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
