@@ -4,7 +4,4 @@ export interface Tweet {
   created_at: string;
   link: string;
   text: string;
-  likes: string;
-  retweets: string;
-  replies: string;
 }
