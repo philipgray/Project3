@@ -53,6 +53,7 @@ import { Component } from '@angular/core';
 	</div>
 
 
+
   <app-confetti-box></app-confetti-box>
   `,
   styleUrls: ['./app.component.css']
