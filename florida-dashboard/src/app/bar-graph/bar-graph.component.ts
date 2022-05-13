@@ -28,7 +28,7 @@ export class BarGraphComponent implements OnInit {
 
   chartType = ChartType.ColumnChart;
 
-  myWidth = 700;
+  myWidth = 450;
   myHeight = 500;
   tweetFrequency = [];
 

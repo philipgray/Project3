@@ -6,6 +6,7 @@ import { Component, Input, OnInit, Output } from '@angular/core';
     <p class='line'
     title={{level}}>
     {{location}}
+    <br>
     {{level}}
     </p>
   `,
