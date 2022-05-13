@@ -12,3 +12,10 @@
 	height: 400px;
 	display: inline-block;
 }
+
+.title{
+  position:sticky;
+  top:0px;
+  background-color:white;
+  padding: 1px;
+}
