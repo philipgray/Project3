@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tweet } from '../interfaces/tweet';
+import { DatabaseApiService } from '../services/database-api.service';
 
 @Component({
   selector: 'app-tweet-list',
@@ -24,12 +25,22 @@ export class TweetListComponent implements OnInit {
 
   tweets: Tweet[] = []
 
-  constructor() { }
+  constructor(private database: DatabaseApiService) { }
+
 
   ngOnInit(): void {
-    this.loadPlaceholderTweets();
+    // this.loadPlaceholderTweets();
+    this.database.getTweets()
+    .then( (response) => (response.json()))
+    .then( (json) => { 
+      // this.tweets = [];
+      for (let i = 0; i < 5; i++){
+        this.tweets.push(json[i]);
+        console.log(this.tweets[i])
+      }
+    }
+    )
   }
-
 
   /**
    * This method should be deleted before the final release.
