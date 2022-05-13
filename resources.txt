@@ -71,3 +71,9 @@ https://developers.google.com/explorer-help/code-samples#python
 
 Specifically modifying YouTube API request for specific searches:
 https://developers.google.com/youtube/v3/docs/search/list
+
+Confetti:
+https://github.com/loonywizard/js-confetti
+
+Default imports:
+https://mindsers.blog/post/javascript-named-imports-vs-default-imports/

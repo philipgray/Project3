@@ -110,9 +110,12 @@ class TweetAnalyzer:
         # return json.dumps(self.frequencyDictionary, sort_keys = True, indent = 2)
 
         frequencyData = []
-        for key in self.frequencyDictionary:
-            frequencyData.append([key, self.frequencyDictionary[key]])
         
+        
+        for year in range(2017, 2020):
+            for month in range(1, 13):
+                frequencyData.append([str(year) + "/" + str(month), self.getFrequency(month, year)])
+
         jsonDict = {'data': frequencyData}
 
 
@@ -152,11 +155,12 @@ def testTweetAnalyzer():
 
     print( analyzer.writeJson() )
 
-    # analyzer.addJsonToDatabase()
+    analyzer.addJsonToDatabase()
 
 def main():
     """"""
     testTweetAnalyzer()
+    
 
 if __name__ == '__main__':
     main()

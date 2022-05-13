@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   template:`
 	<!-- This anchor is just a reference to the top of the page -->
     <a id = 'home'></a>
-	
+
+
+
 	<div class="containercontainer">
 	<app-title-box></app-title-box>
 	<div class="navbarorder">
@@ -14,7 +16,7 @@ import { Component } from '@angular/core';
 	</div>
 
 	<div class="container">
-    
+
 	<div class="text">
     <p>
       Red tide, a harmful algae bloom that regularly occurs on the coasts of Florida, creates toxic
@@ -30,28 +32,28 @@ import { Component } from '@angular/core';
     <app-bar-graph></app-bar-graph>
 	<app-tweet-list></app-tweet-list>
 	</div>
-	
+
     <!-- Put spotify content right under this anchor -->
 	<a id = 'spotify'></a>
-	
+
 	<div class="rightcontainer">
 	<app-spotify-container></app-spotify-container>
 	<app-sensordata></app-sensordata>
 	</div>
 	</div>
-	
+
 	<!-- Put youtube content right under this anchor -->
 	<a id = 'youtube'></a>
     <app-youtube-panel></app-youtube-panel>
 
 	<app-chatboard></app-chatboard>
-	
-	</div>
 
 	</div>
 
+	</div>
 
 
+  <app-confetti-box></app-confetti-box>
   `,
   styleUrls: ['./app.component.css']
 })
