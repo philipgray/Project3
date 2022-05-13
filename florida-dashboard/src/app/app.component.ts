@@ -29,7 +29,7 @@ import { Component } from '@angular/core';
 	<a id = 'twitter'></a>
     <!-- Put twitter content right under this anchor -->
 	<div class="leftcontainer">
-    <app-bar-graph></app-bar-graph>
+	<app-sensordata></app-sensordata>
 	<app-tweet-list></app-tweet-list>
 	</div>
 
@@ -38,7 +38,7 @@ import { Component } from '@angular/core';
 
 	<div class="rightcontainer">
 	<app-spotify-container></app-spotify-container>
-	<app-sensordata></app-sensordata>
+    <app-bar-graph></app-bar-graph>
 	</div>
 	</div>
 
