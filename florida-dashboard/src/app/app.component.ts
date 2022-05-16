@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
     <!-- Put twitter content right under this anchor -->
 	<div class="leftcontainer">
 	<app-sensordata></app-sensordata>
-	<app-tweet-list></app-tweet-list>
+	<!-- <app-tweet-list></app-tweet-list> -->
 	</div>
 
     <!-- Put spotify content right under this anchor -->
