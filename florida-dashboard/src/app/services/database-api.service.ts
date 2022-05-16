@@ -11,6 +11,7 @@ import { Tweet } from '../interfaces/tweet';
 export class DatabaseApiService {
 
   private backendApiEndpoint = 'http://34.228.160.243:3000'
+  //private backendApiEndpoint = "http://172.16.9.123:3000/"
 
   constructor(private http: HttpClient) { }
 

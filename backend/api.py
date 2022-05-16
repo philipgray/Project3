@@ -50,7 +50,7 @@ mongo = PyMongo(app, tlsCAFile=ca)
 client = MongoClient(cs, tlsCAFile=ca)
 
 
-@app.route('/')
+@app.route('/g')
 def home():
     """
     Redirect sends the person to a different URL, and in this case to the climbing club website :)
@@ -77,6 +77,7 @@ def api_all_tweets():
 
 
 @app.route('/api/v1/redtide/tweets/history/frequency', methods=['GET'])
+@cross_origin()
 def api_historical_tweet_frequency():
     """
     This method is used for returning the historical Tweet frequency from our database.
@@ -134,6 +135,7 @@ def api_post_messages():
 
 
 @app.route('/api/v1/redtide/youtube', methods=['GET'])
+@cross_origin()
 def api_youtube_video():
     """
     This method gets one of the recent youtube videos from our database.
@@ -223,5 +225,5 @@ def api_cell_counts():
 
 """
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=3000, debug=True)
 """
