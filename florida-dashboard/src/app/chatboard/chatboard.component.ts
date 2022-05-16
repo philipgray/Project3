@@ -87,7 +87,7 @@ export class ChatboardComponent implements OnInit {
 		this.values.push({'text': text, 'location': location, 'name': name});
 		window.location.reload();
 		console.log(this.values);
-		fetch("http://34.228.160.243:3000/messages/send?name="+name+"&location="+location+"&message="+text);
+		fetch("http://127.0.0.1:3000/messages/send?name="+name+"&location="+location+"&message="+text);
 	}
 
 
