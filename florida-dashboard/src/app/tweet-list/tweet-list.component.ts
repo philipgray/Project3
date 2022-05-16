@@ -33,14 +33,21 @@ export class TweetListComponent implements OnInit {
     this.database.getTweets()
     .then( (response) => (response.json()))
     .then( (json) => { 
+    this.tweets[0] = json[1];
+      }
+    )
+    }
+
       // this.tweets = [];
+      /** 
       for (let i = 0; i < 5; i++){
         this.tweets.push(json[i]);
         console.log(this.tweets[i])
       }
     }
-    )
-  }
+    */
+    
+
 
   /**
    * This method should be deleted before the final release.

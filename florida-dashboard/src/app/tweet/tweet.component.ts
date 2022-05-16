@@ -47,8 +47,8 @@ export class TweetComponent implements OnInit {
    */
      createdAtToDate(created_at: string): string {
       var components = created_at.split('-');
-      var day = components[2].substring(0, 2);
-
+      // var day = components[2].substring(0, 2);
+      var day = 1;
       return components[1] + '/' + day + '/' + components[0];
     }
 
