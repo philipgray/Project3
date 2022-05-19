@@ -46,7 +46,8 @@ import { Component } from '@angular/core';
 	<a id = 'youtube'></a>
     <app-youtube-panel></app-youtube-panel>
 
-	<app-chatboard></app-chatboard>
+    <app-chatboard></app-chatboard>
+    <a id = 'chatboard'></a>
 
 	</div>
 
