@@ -10,7 +10,7 @@ import { Tweet } from '../interfaces/tweet';
 })
 export class DatabaseApiService {
 
-  private backendApiEndpoint = 'http://34.228.160.243:3000'
+  private backendApiEndpoint = 'https://votesrq.com'
 
   constructor(private http: HttpClient) { }
 
