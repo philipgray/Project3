@@ -7,9 +7,14 @@ import { DatabaseApiService } from '../services/database-api.service';
   template: `
   <div class="container">
     <div class="title">
-      <p> Sensor Data (Cell counts of red tide algae)
+      <img src="assets/CellCountKey.png"
+      width=206px
+      height=166px>
+      <p> Sensor Data from Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute </p>
+      <p> This data represents how many cells of red tide (per liter) were found at different beaches </p>
 
       <!-- Dropdown to choose county -->
+      Filter:
       <select
       (change)='filterCounty( getSelectValue($event) )' >
         <option value = "All">All Counties</option>

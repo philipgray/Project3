@@ -42,6 +42,7 @@
 	/* //position: absolute; */
 }
 
-div[title="not present/background (0-1,000)"]{
-  background-color: green;
+.indent{
+  text-indent: 20px;
+  font-size: 11px;
 }
