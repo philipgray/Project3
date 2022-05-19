@@ -29,13 +29,13 @@ app-navigation-bar {
 	display: relative;
 	float: center;
 	width: auto;
-	border: 3px dashed #005;
+	border: 0px dashed #005;
 }
 .rightcontainer{
 	display: relative;
 	float: right;
 	width: 40%;
-	border: 3px dashed #005;
+	border: 0px dashed #005;
 }
 .leftrightcontainercontainer{
 	display: flex;
@@ -46,7 +46,7 @@ app-navigation-bar {
 	width: 90%;
 	margin: auto;
 	margin-top: 20px;
-	border: 3px dashed #005;
+	border: 0px dashed #005;
 
 }
 
