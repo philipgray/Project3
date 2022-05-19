@@ -31,17 +31,18 @@ export class TweetListComponent implements OnInit {
   ngOnInit(): void {
     // this.loadPlaceholderTweets();
     
-    // Get the sensor data
+    /** 
     this.database.getTweets()
     .then( (response) => (response.json()))
     .then( (json) => {
-      
+
 
     })
     .catch( (error) => {
       console.log("ERROR: Could not get tweets.")
       console.error(error);
     });
+    */
   }
 
 
