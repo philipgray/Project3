@@ -24,6 +24,7 @@ and for future notice, you can get an unlimited number of
 import configparser
 import certifi
 import flask
+from flask_talisman import Talisman
 
 import time
 from pymongo import MongoClient
@@ -49,6 +50,7 @@ ca = certifi.where()
 mongo = PyMongo(app, tlsCAFile=ca)
 client = MongoClient(cs, tlsCAFile=ca)
 
+Talisman(app, content_security_policy=None)
 
 @app.route('/g')
 def home():
