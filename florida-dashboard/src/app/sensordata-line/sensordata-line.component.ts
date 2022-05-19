@@ -3,12 +3,13 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-sensordata-line',
   template: `
-    <p class='line'
+    <div class='line'
     title={{level}}>
     {{location}}
     <br>
-    {{level}}
-    </p>
+      <div class="indent">Algae count: {{level}} </div>
+      <div class="indent">Date updated: {{date}}</div>
+    </div>
   `,
   styleUrls: ['./sensordata-line.component.css']
 })

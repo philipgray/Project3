@@ -7,30 +7,36 @@ import { Component, OnInit } from '@angular/core';
     <div class="buttons">
       <!-- Buttons to navigate the page -->
       <app-navigation-button
-        hrefId = '#home'
-        imagePath = 'assets/home_icon.png'
-        altText = 'Top of Page'>
-      </app-navigation-button>
+      hrefId = '#home'
+      imagePath = 'assets/home_icon.png'
+      altText = 'Top of Page'>
+    </app-navigation-button>
 
-      <app-navigation-button
-        hrefId = '#twitter'
-        imagePath = 'assets/twitter_icon.png'
-        altText = 'Twitter Data'></app-navigation-button>
+    <app-navigation-button
+      hrefId='#spotify'
+      imagePath = 'assets/spotify_icon.png'
+      altText = 'Spotify Podcasts'></app-navigation-button>
 
-      <app-navigation-button
-        hrefId='#youtube'
-        imagePath = 'assets/youtube_icon.png'
-        altText = 'Informational Videos'></app-navigation-button>
+    <app-navigation-button
+      hrefId = '#twitter'
+      imagePath = 'assets/twitter_icon.png'
+      altText = 'Twitter Data'></app-navigation-button>
 
-      <app-navigation-button
-        hrefId='#spotify'
-        imagePath = 'assets/spotify_icon.png'
-        altText = 'Spotify Podcasts'></app-navigation-button>
-		
+    <app-navigation-button
+      hrefId='#youtube'
+      imagePath = 'assets/youtube_icon.png'
+      altText = 'Informational Videos'></app-navigation-button>
+
+    <app-navigation-button
+    hrefId='#chatboard'
+    imagePath = 'assets/chat_icon.png'
+    altText = 'Chatboard'></app-navigation-button>
+
+
     </div>
-	
+
 	</div>
-	
+
   `,
   styleUrls: ['./navigation-bar.component.css']
 })

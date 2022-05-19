@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
     <!-- Put twitter content right under this anchor -->
 	<div class="leftcontainer">
 	<app-sensordata></app-sensordata>
-	<!-- <app-tweet-list></app-tweet-list> -->
+	<app-tweet-list></app-tweet-list>
 	</div>
 
     <!-- Put spotify content right under this anchor -->
@@ -46,12 +46,12 @@ import { Component } from '@angular/core';
 	<a id = 'youtube'></a>
     <app-youtube-panel></app-youtube-panel>
 
-	<!-- <app-chatboard></app-chatboard> -->
+    <app-chatboard></app-chatboard>
+    <a id = 'chatboard'></a>
 
 	</div>
 
 	</div>
-
 
 
   <app-confetti-box></app-confetti-box>

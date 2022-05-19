@@ -36,12 +36,13 @@
 	font-size: 12px;
 	/* //position: center; */
 	font-weight: none;
-	float: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	margin: 4px;
 	/* //position: absolute; */
+  display: inline-block;
 }
 
-div[title="not present/background (0-1,000)"]{
-  background-color: green;
+.indent{
+  text-indent: 20px;
+  font-size: 11px;
 }

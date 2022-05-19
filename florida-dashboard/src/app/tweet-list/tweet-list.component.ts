@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tweet } from '../interfaces/tweet';
+import { DatabaseApiService } from '../services/database-api.service';
+
 
 @Component({
   selector: 'app-tweet-list',
@@ -24,10 +26,23 @@ export class TweetListComponent implements OnInit {
 
   tweets: Tweet[] = []
 
-  constructor() { }
+  constructor(private database: DatabaseApiService) { }
 
   ngOnInit(): void {
-    this.loadPlaceholderTweets();
+    // this.loadPlaceholderTweets();
+    
+    /** 
+    this.database.getTweets()
+    .then( (response) => (response.json()))
+    .then( (json) => {
+
+
+    })
+    .catch( (error) => {
+      console.log("ERROR: Could not get tweets.")
+      console.error(error);
+    });
+    */
   }
 
 
