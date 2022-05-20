@@ -49,13 +49,13 @@ mongo = PyMongo(app, tlsCAFile=ca)
 client = MongoClient(cs, tlsCAFile=ca)
 
 
-@app.route('/')
-def home():
+@app.route('/t')
+def test():
 	return "<h1 style='color:blue'>HELLO WELCOME TO MY WEBSITE :) </h1>"
 
 
-@app.route('/g')
-def cc():
+@app.route('/')
+def home():
     """
     Redirect sends the person to a different URL, and in this case to the climbing club website :)
 
