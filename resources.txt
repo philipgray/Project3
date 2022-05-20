@@ -72,29 +72,11 @@ https://developers.google.com/explorer-help/code-samples#python
 Specifically modifying YouTube API request for specific searches:
 https://developers.google.com/youtube/v3/docs/search/list
 
+YouTube search result JSON format:
+https://developers.google.com/youtube/v3/docs/search#resource
+
 Confetti:
 https://github.com/loonywizard/js-confetti
 
 Default imports:
 https://mindsers.blog/post/javascript-named-imports-vs-default-imports/
-
-Twitter API:
-https://developer.twitter.com/en/docs/twitter-api
-
-How to scrape ARCGIS data:
-https://stackoverflow.com/questions/50161492/how-do-i-scrape-data-from-an-arcgis-online-map
-
-Setting up NGINX, and Gunicorn to work with Flask:
-https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
-
-Querying MongoDB:
-https://www.mongodb.com/docs/manual/tutorial/query-documents/
-
-Spotify API:
-https://developer.spotify.com/documentation/web-api/
-
-Flask Basics:
-https://flask.palletsprojects.com/en/2.1.x/
-
-Setting up CRON Jobs:
-https://phoenixnap.com/kb/set-up-cron-job-linux

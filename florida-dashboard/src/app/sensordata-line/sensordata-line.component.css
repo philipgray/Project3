@@ -1,4 +1,6 @@
 
+/* Based on the title, which is set to one of five levels of red tide, the
+   background color of the box will change. */
 /* Low / harmless levels */
 .line[title="not present/background (0-1,000)"]{
   background-color: rgb(177, 177, 177);

@@ -1,7 +1,25 @@
 import { Component, Input, OnInit } from '@angular/core';
-// A button that can store an image or text, and which navigates to a different page/href when clicked
-// @author Alex Wills
-
+/**
+ * A button that can store an image or text, and which navigates to a different page/href when clicked
+ * Usage: <app-navigation-button
+ *        hrefId='#[anchorID]'
+ *        imagePath='[imagePath]'
+ *        altText='[alt text]'> </app-navigation-button>
+ *
+ * HTML allows for instantly moving to different parts of a website using anchors and href properites.
+ * When you click on an anchor, it will take you to the href property (another webpage if you specify a link,
+ * or another anchor if you specify an anchor's ID).
+ *
+ * This component makes a button with an image, and an invisible anchor that takes you to another anchor based on
+ * what you specify as this component's hrefId property.
+ * When you click on the button, it automatically clicks on the invisible anchor to take you to its destination.
+ *
+ * You should pass in the destination anchor's ID with a '#' sign.
+ * If your destination is an anchor <a id = 'home'> </a>,
+ * this component should be <app-navigation-button hrefId = '#home'> </app-navigation-button>
+ *
+ * @author Alex Wills
+ */
 @Component({
   selector: 'app-navigation-button',
   template: `

@@ -1,7 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { CellcountData } from '../interfaces/cellcount-data';
 import { DatabaseApiService } from '../services/database-api.service';
-
+/**
+ * Collect, filter, and display the sensor data, representing the amount of Red Tide (cells per liter) found
+ * at different beaches.
+ * On the typescript side, cell count data is stored by each beach using the CellcountData interface
+ * (See interfaces/cellcount-data.ts), and it is displayed with the Sensordata-Line component
+ * (See sensordata-line/)
+ *
+ * The data comes from Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute
+ * Link to source's website: https://myfwc.com/research/redtide/monitoring/database/
+ * Link to how the source presents their data to the public: https://myfwc.maps.arcgis.com/apps/View/index.html?appid=87162eec3eb846218cec711d16462a72
+ *
+ * Every beach is stored in an array holding all of the data. The beaches are sorted by the backend server by date
+ * and county, so that all beaches in a given county are grouped together, with the most recent data from each county
+ * appearing before the older data.
+ *
+ * When the component gets all of the data, it makes a list of all the counties represented by iterating through the data
+ * and recording any new counties in a new list. This list of counties is used to make a dropdown filter that allows
+ * the user to sort the data by county. On creation, all of the data is also copied into a separate list to display.
+ *
+ * There are two lists: a list of all of the data, and a list of the filtered data to display. By keeping a list of all of
+ * the data, we can bring back data that was previously filtered out witout needing to make a request to the backend.
+ *
+ * Any time the user changes the filter, the list of data to show (not the list of all data) is completely rebuilt.
+ * This is done by iterating through the list of all data, and copying over only the data that is from the county specified
+ * by the filter. If "all counties" is selected, it will copy over all of the data.
+ *
+ * Because the sensordata-line components change color based on how much red tide they report, this component
+ * also contains an image for a color-key to inform the user what different colored entries mean.
+ *
+ * @author Alex Wills
+ */
 @Component({
   selector: 'app-sensordata',
   template: `
@@ -10,6 +40,7 @@ import { DatabaseApiService } from '../services/database-api.service';
       <img src="assets/CellCountKey.png"
       width=206px
       height=166px>
+      <!-- Context for sensor data -->
       <p> Sensor Data from Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute </p>
       <p> This data represents how many cells of red tide (per liter) were found at different beaches </p>
 
@@ -27,7 +58,7 @@ import { DatabaseApiService } from '../services/database-api.service';
       </select>
     </div>
 
-
+    <!-- All of the filtered sensor data -->
     <app-sensordata-line *ngFor='let beachData of dataToShow'
       [class]='beachData.abundance'
       [date]='beachData.date'

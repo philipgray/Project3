@@ -3,7 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { CellcountData } from '../interfaces/cellcount-data';
 import { Tweet } from '../interfaces/tweet';
 import { DatabaseApiService } from '../services/database-api.service';
-
+/**
+ * This component should not show up anywhere on the deployed website. It exists
+ * for testing, as a way to display information on the website (for quick feedback and debugging)
+ * without interfering with any other components.
+ *
+ * @author Everyone
+ */
 @Component({
   selector: 'app-test-box',
   template: `

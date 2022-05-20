@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+/**
+ * Root component containing the overall structure of the website
+ */
 @Component({
   selector: 'app-root',
   template:`
@@ -11,7 +13,7 @@ import { Component } from '@angular/core';
 	<div class="containercontainer">
 	<app-title-box></app-title-box>
 	<div class="navbarorder">
-    <!-- Navigation bar to stay at top of screen -->
+    <!-- Navigation bar to stay at side of screen -->
     <app-navigation-bar></app-navigation-bar>
 	</div>
 
@@ -53,7 +55,7 @@ import { Component } from '@angular/core';
 
 	</div>
 
-
+  <!-- Secret confetti to promote climbing club -->
   <app-confetti-box></app-confetti-box>
   `,
   styleUrls: ['./app.component.css']

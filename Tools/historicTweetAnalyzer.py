@@ -3,6 +3,7 @@
 #
 # Created by Alex Wills
 # This code reads a CSV file and processes it to store/display information about historical twitter data.
+# CSV data from: https://github.com/tbep-tech/red-tide-twitter
 # 
 # If adapting this code to read and process other CSV files, see the # NOTE: comments
 # Resources:
@@ -124,6 +125,7 @@ class TweetAnalyzer:
         return jsonDict
 
     def addJsonToDatabase(self):
+        ''' Stores JSON representation of CSV, formatted for Google Chart, in our database. '''
         database = RedTideDB.RedTideDB()
         database.addHistoricalData(self.writeJson())
         database.close()

@@ -117,6 +117,13 @@ class RedTideDB:
         Also stores the day this method was called, and does not change anything if the
         video is already in the database.
 
+        NOTE: there is a very specific scenario where this approach will not entirely work.
+        If video X is added as the most relevant video, then the next day video Y is added,
+        both videos will exist in the database, but since video Y is more recent, the backend 
+        will stil accurately return video Y. However, if the next day video X is more popular again,
+        it will not be added because it is already in the database, and the backend will continue
+        to return video Y.
+
         PARAMETERS
         videoId - the youtube video's ID
         category - the category of this video (for example: symptoms, awareness, prevention, etc.)
