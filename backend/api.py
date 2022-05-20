@@ -213,8 +213,8 @@ def api_cell_counts():
     """
 
     # Get a cursor to iterate over the documents
-    documents = mongo.db.sensorData.find().sort([('county', 1)])
 
+    documents = mongo.db.sensorData.find().sort([('date', -1), ('county', 1)])
     data = []
 
     # Add every document to the list
