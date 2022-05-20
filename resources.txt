@@ -95,3 +95,6 @@ https://developer.spotify.com/documentation/web-api/
 
 Flask Basics:
 https://flask.palletsprojects.com/en/2.1.x/
+
+Setting up CRON Jobs:
+https://phoenixnap.com/kb/set-up-cron-job-linux
