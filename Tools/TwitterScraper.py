@@ -11,6 +11,11 @@ class TwitterScraper:
     and api secret keys.
 
     Designed around the recent tweet API, so mileage may vary when trying to use it for different things.
+
+    We're using the Twitter API v2 endpoints, as you can see in the default search url below. This should (?) work with
+    the v1 endpoints as well. If not, feel free to yell at me.
+
+    - PG
     """
 
     def __init__(self, search_url="https://api.twitter.com/2/tweets/search/recent", last_id=0):
