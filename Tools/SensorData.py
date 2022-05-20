@@ -21,9 +21,11 @@ class SensorData:
     def getData(self) -> list:
         response = self.__makeRequest()
         readings = []
+        count = 0
 
         for reading in response['features']:
             if reading['attributes']['OBJECTID'] > self.last_id:
+                count += 1
                 date = datetime.strptime(reading['attributes']['SampleDate_t']
                                          .strip(), "%b %d %Y")
                 data = {
@@ -37,4 +39,5 @@ class SensorData:
 
                 readings.append(data)
 
+        print(f'Added {count} new sensor data samples!')
         return readings

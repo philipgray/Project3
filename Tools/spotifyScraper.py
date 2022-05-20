@@ -16,3 +16,5 @@ result = sp.search(q="Red Tide", type="show,episode", market="US")
 
 pprint.pprint(result)
 search = "red tide"
+
+

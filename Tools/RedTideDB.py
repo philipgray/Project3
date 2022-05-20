@@ -80,8 +80,12 @@ class RedTideDB:
         - PG
         """
         db = self.client.redtideDB
-        lastTweetID = db.tweets.find_one(sort=[('_id', pymongo.DESCENDING)])['_id']
-        print(type(lastTweetID))
+        try:
+            lastTweetID = db.tweets.find_one(sort=[('_id', pymongo.DESCENDING)])['_id']
+        except TypeError:
+            print("Oh no! There are no tweets!")
+            lastTweetID = 0
+        # print(type(lastTweetID))
         return int(lastTweetID)
 
     def getLastSensorData(self) -> int:
@@ -91,8 +95,11 @@ class RedTideDB:
         - PG
         """
         db = self.client.redtideDB
-        lastSensorID = db.sensorData.find_one(sort=[('_id', pymongo.DESCENDING)])['_id']
-        print(type(lastSensorID))
+        try:
+            lastSensorID = db.sensorData.find_one(sort=[('_id', pymongo.DESCENDING)])['_id']
+        except TypeError:
+            print("Oh no! There's no sensor data!")
+            lastSensorID = 0
         return int(lastSensorID)
 
     def close(self):
@@ -127,7 +134,7 @@ class RedTideDB:
 
         # As long as the video isn't already in the database, add it to the database
         if not duplicateVideo:
-            print("Adding video to databse")
+            print("Adding video to database")
             youtube.insert_one(
                 {'_id': str(date.today()) + videoId,
                  'category': category,
@@ -141,7 +148,6 @@ def main():
     client = RedTideDB()
     client.addYoutubeVideo("R7t7qrH_dsc", 'trending')
     client.close()
-    
 
 
 if __name__ == "__main__":

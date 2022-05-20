@@ -12,6 +12,7 @@ class TwitterScraper:
 
     Designed around the recent tweet API, so mileage may vary when trying to use it for different things.
     """
+
     def __init__(self, search_url="https://api.twitter.com/2/tweets/search/recent", last_id=0):
         config = configparser.ConfigParser()
         config.read('config.ini')
@@ -63,13 +64,15 @@ class TwitterScraper:
 
         response = self.connect_to_endpoint(self.search_url, query_params)
         results = []
+        count = 0
 
         for data in response['data']:
             if int(data['id']) > self.last_id:
-
+                count += 1
                 date = parser.parse(data['created_at'])
+                converted_id = int(data['id'])
                 tweet = {
-                    '_id': data['id'],
+                    '_id': converted_id,
                     'text': data['text'],
                     'created_at': date,
                     'link': f"https://www.twitter.com/twitter/status/{data['id']}",
@@ -79,5 +82,5 @@ class TwitterScraper:
                 }
 
                 results.append(tweet)
-
+        print(f'Added {count} new tweets!')
         return results
