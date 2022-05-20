@@ -34,7 +34,7 @@ from flask_pymongo import PyMongo
 from flask_cors import CORS, cross_origin
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('../config.ini')
 mdb = config['mongoDB']
 
 # establish the "connection string" that we use to connect to the db with.

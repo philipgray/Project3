@@ -20,7 +20,7 @@ class YoutubeScraper:
     def __init__(self):
         # Get developer key from config file
         config = configparser.ConfigParser()
-        config.read('config.ini')
+        config.read('../config.ini')
         self.DEVELOPER_KEY = config['youtube']['api_key']
 
         # Create a reference to the google API for youtube

@@ -15,7 +15,7 @@ class TwitterScraper:
 
     def __init__(self, search_url="https://api.twitter.com/2/tweets/search/recent", last_id=0):
         config = configparser.ConfigParser()
-        config.read('config.ini')
+        config.read('../config.ini')
         self.bearer_token = config['twitter']['bearer']
         self.search_url = search_url
         self.last_id = last_id

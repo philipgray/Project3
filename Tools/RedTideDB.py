@@ -23,7 +23,7 @@ class RedTideDB:
         ca = certifi.where()
 
         config = configparser.ConfigParser()
-        config.read('config.ini')
+        config.read('../config.ini')
         mdb = config['mongoDB']
 
         # establish the "connection string" that we use to connect to the db with.

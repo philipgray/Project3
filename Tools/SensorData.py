@@ -6,7 +6,7 @@ import requests
 class SensorData:
     def __init__(self, last_id=0):
         config = configparser.ConfigParser()
-        config.read('config.ini')
+        config.read('../config.ini')
         self.url = config['sensorData']['url']
         self.last_id = last_id
 
