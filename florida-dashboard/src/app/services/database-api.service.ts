@@ -11,6 +11,8 @@ import { Tweet } from '../interfaces/tweet';
 export class DatabaseApiService {
 
   private backendApiEndpoint = 'https://votesrq.com'
+  // private backendApiEndpoint = 'http://172.16.8.119:3000';
+
 
   constructor(private http: HttpClient) { }
 
@@ -82,5 +84,13 @@ export class DatabaseApiService {
     });
   }
 
-
+  getTweets(){
+    return fetch(this.backendApiEndpoint + '/api/v1/redtide/tweets/all', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*'
+      }
+    });
+  }
 }

@@ -14,11 +14,11 @@ import { Tweet } from '../interfaces/tweet';
         <br>
       Likes: {{this.tweet.likes}}
       Retweets: {{this.tweet.retweets}}
-      Posted: {{ this.createdAtToDate(this.tweet.created_at)}}
+      Posted: {{ this.tweet.created_at}}
       </div>
     </div>
 
-    
+
     `,
   styleUrls: ['./tweet.component.css']
 })

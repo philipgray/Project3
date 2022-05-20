@@ -1,6 +1,7 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CellcountData } from '../interfaces/cellcount-data';
+import { Tweet } from '../interfaces/tweet';
 import { DatabaseApiService } from '../services/database-api.service';
 
 @Component({
@@ -38,6 +39,17 @@ import { DatabaseApiService } from '../services/database-api.service';
     <p *ngFor='let cell of cellsToShow'>
       {{cell.county}} what the beach: {{cell.location}}
     </p>
+
+
+    <p> Tweets </p>
+    {{tweetData}}
+    <div *ngFor='let tweet of tweets'>
+      <app-tweet
+      [tweet]='tweet'></app-tweet>
+    </div>
+
+    <p> end of test </p>
+
   `,
   styleUrls: ['./test-box.component.css']
 })
@@ -47,6 +59,9 @@ export class TestBoxComponent implements OnInit {
   headers: string[] = [];
   body: any;
   link: any;
+
+  tweetData: string = " data not loaded";
+  tweets: Tweet[] = [];
 
   cells: CellcountData[] = [];
 
@@ -61,12 +76,19 @@ export class TestBoxComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.database.getMessages()
-    .then( (response) => (response.json()))
-    .then( (json) => {
-      this.body = json[0].message;
-    });
+    this.database.getTweets().then((response) => (response.json()))
+    .then((json) => {
+      this.tweetData = json.length + " total tweets";
+      this.tweets[0] = json[0];
+      this.tweets[1] = json[1];
 
+      for(let i = 0; i < json.length && i < 10; i++){
+        this.tweets[i] = json[i];
+      }
+    })
+    .catch((reason) => {
+      this.tweetData = "Fetching tweets failed :(\n" + reason;
+    });
   }
 
   getData(resp: HttpResponse<any>){

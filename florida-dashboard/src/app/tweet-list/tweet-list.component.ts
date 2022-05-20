@@ -17,7 +17,7 @@ import { DatabaseApiService } from '../services/database-api.service';
       [tweet]='tweet'>
     </app-tweet>
 
-    Updated daily at midnight EST. 
+    Updated daily at midnight EST.
 	</div>
   `,
   styleUrls: ['./tweet-list.component.css']
@@ -28,21 +28,26 @@ export class TweetListComponent implements OnInit {
 
   constructor(private database: DatabaseApiService) { }
 
+  private tweetLimit: number = 10;
+
   ngOnInit(): void {
     // this.loadPlaceholderTweets();
-    
-    /** 
+
+
     this.database.getTweets()
     .then( (response) => (response.json()))
     .then( (json) => {
 
+      for(let i = 0; (i < json.length && i < this.tweetLimit); i++){
+        this.tweets[i] = json[i];
+      }
 
     })
     .catch( (error) => {
       console.log("ERROR: Could not get tweets.")
       console.error(error);
     });
-    */
+
   }
 
 
