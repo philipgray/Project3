@@ -6,19 +6,23 @@ import { DatabaseApiService } from '../services/database-api.service';
 @Component({
   selector: 'app-tweet-list',
   template: `
-  <div class="twitter-container">
-    <div class="title">
+  <div class="twitter-box">
+  <div class="title">
       <p>
         Recent Tweets:
       </p>
     </div>
+  <div class="twitter-container">
 
-    <app-tweet *ngFor='let tweet of tweets'
-      [tweet]='tweet'>
-    </app-tweet>
 
-    Updated daily at midnight EST.
-	</div>
+      <app-tweet *ngFor='let tweet of tweets'
+        [tweet]='tweet'>
+      </app-tweet>
+	  </div>
+    <div class="twitter-bottom">
+      Updated daily at midnight EST.
+    </div>
+  </div>
   `,
   styleUrls: ['./tweet-list.component.css']
 })
@@ -28,7 +32,7 @@ export class TweetListComponent implements OnInit {
 
   constructor(private database: DatabaseApiService) { }
 
-  private tweetLimit: number = 10;
+  private tweetLimit: number = 25;
 
   ngOnInit(): void {
     // this.loadPlaceholderTweets();

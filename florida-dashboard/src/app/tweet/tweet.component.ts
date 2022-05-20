@@ -14,6 +14,7 @@ import { Tweet } from '../interfaces/tweet';
         <br>
       Likes: {{this.tweet.likes}}
       Retweets: {{this.tweet.retweets}}
+      <br>
       Posted: {{ this.tweet.created_at}}
       </div>
     </div>
