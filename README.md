@@ -10,7 +10,7 @@ The dashboard was built using a ton of different technologies:
 * The front end is hosted on AWS Amplify, and the backend on an AWS EC2 instance. 
 
 ## Installation
-Below are the steps for setting up and running our dashboard locally, or online.
+Below are the steps for setting up the environment for running our dashboard locally, or online.
 
 ### Project Installation
 
@@ -32,11 +32,25 @@ This will copy the latest version of the project onto your system, and in the ev
 ```bash
 git pull
 ```
+This will pull changes that have been pushed to our master branch, making sure you're up to date! 
+
 ----
 
 ### Python Installation
 
-Our backend was made using Flask, which is a Python framework, so first you'll have to install Python. Our server is 
+Our backend was made using Flask, which is a Python framework, so first you'll have to install Python if you don't already have it. You can check to see if you have it by typing:
+
+```bash
+python -V
+```
+If that doesn't work you probably don't have Python, but we'll try one more thing just in case:
+
+```bash
+python3 -V
+```
+If you did get see something about your Python version and it's below 3.6.9, we recommend downloading a more updated version. 3.6.9 is the lowest version we're certain works for our project.
+
+If you didn't get anything again, we recommend downloading the latest version of Python. The latest version can be found [here](https://www.python.org/downloads/). 
 
 ---
 ### Angular Installation
@@ -102,7 +116,7 @@ username = xyz
 pw = xyz
 api = xyz
 server = xyz
-url = https://data.mongodb-api.com/app/data-ijcxi/endpoint/data/beta/action/find
+url = https://data.mongodb-api.com/app/data-ijcxi/endpoint/data/beta/action/find <- May be incorrect for you!
 
 [sensorData]
 url = https://atoll.floridamarine.org/arcgis/rest/services/Projects_FWC/HAB_Current/MapServer/0/query?where=0%%3D0&outFields=%%2A&f=json
@@ -115,6 +129,8 @@ And this file is called, "config.ini" and will be saved in the Project3 director
 * [MongoDB](https://www.mongodb.com/)
 
 Once you've gotten your various keys, you'll want to replace the xyz with the subsequent codes that  got from registering for these APIs. One thing to note is in the Twitter bearer token, you might have a `%` sign, and it will not properly read. To fix this all you need to do is add another `%` right before or after it and it will work properly. 
+
+MongoDB is also a little weird, you'll want to create your own database. If you want to avoid potential charges, we suggest you use a shared cluster. Once you've made your database, and you're looking at the database deployments, find the db you've created, and click "Connect" which will provide you with code and instructions to connect to your MongoDB in a variety of different programming languages. 
 
 ## Package Installation
 
@@ -142,6 +158,14 @@ source tutorial-env/bin/activate
 ```
 
 Congratulations, you've activated your virtual environment! Now we'll start getting the packages required for the project. Python makes this relatively easy by using a file called, "requirements.txt" which lists all the packages you'll need in order to run the project. 
+
+To use the requirements.txt file, assuming you're in your virtual environment still, go to the Project3 directory and type the following:
+
+```bash
+pip install -r requirements.txt
+```
+
+And it should install all the packages you need! If there's any problems with some of the more specific scripts, I suggest checking the headers for those files. There might be additional things that requirements.txt unfortunately didn't get! 
 
 ---
 
@@ -215,10 +239,44 @@ gunicorn --bind 0.0.0.0:5000 wsgi:app
 
 You're now ready for the big leagues, and by that I mean trying to deploy this with AWS!  
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+---
+### AWS Deployment: Basics
 
-Please make sure to update tests as appropriate.
+You're going to need to [make an AWS account](https://aws.amazon.com/). Fortunately, Amazon has a free tier which is perfect for hosting this project! You'll need a credit / debit card to sign up by the way. 
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+### AWS Deployment: Frontend
+
+Hosting the frontend is actually really simple! We use [AWS amplify](https://aws.amazon.com/amplify/), and we've connected it to our GitHub so whenever a change occurs in main, the frontend automatically updates. There's a variety of routes you can go here though, if you've made your own fork of our project, then you could connect it with your GitHub repo. Otherwise, you can always just upload the frontend manually. 
+
+---
+
+### AWS Deployment: Backend
+
+Now, I'm going to warn you -- this is going to absolutely be a pain to setup. The headache that was trying to set this up... don't get me started. 
+
+Because we love to make things more difficult for ourselves, you'll need to jump through a lot of hoops to get the frontend to connect with the backend. This is because since they're hosted in separate places, and the frontend would make a GET request of our backend. That sounds correct, doesn't it? It was, however, our backend was being served over HTTP which resulted in the web browser blocking the content because the data was insecure. So how did we fix that?
+
+The first thing you're probably going to do is purchase a domain for your website. I suggest using [Namecheap](https://www.namecheap.com/), they've always been great to me. Why do you need a domain? Because you're going to be getting a [Certificate Authority from Let's Encrypt](https://letsencrypt.org/getting-started/) which will basically tell web browsers that your website is relatively legitimate (I've heard of some phishing sites, and scams being served over https, hence the relatively.) To get a certificate, you're going to want your own domain.
+
+If you don't care that your frontend can't get the data, then you can always skip the above step. Anyways, let's start getting our backend. You'll want to [create an Amazon EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html). To avoid a majority of the headache that I experienced, I suggest using one of the free Ubuntu 18.04 instances. I also suggest following the [best practices guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html) as well. 
+
+Once you've got it running, I suggest following [this guide (Serving Flask Applications with Gunicorn and Nginx)](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04) to the letter, except in a few places. The only things that won't pertain to you is the ufw which is the firewall. AWS has it's own firewall, and you'll want to follow [this guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html). Security Groups can be a little confusing at first, but you're basically setting up what ports will be accessible, so remember hosting your backend on port 3000? You're going to want to open that port if you want to access your backend! Anyways, assuming you've followed that guide, and made small adjustments for the project (like the directory, etc.), you should have your backend working! Congratulations! 
+
+However, don't get too excited... there's still a few things we've got to do. [This involves pointing your domain to the server](https://techgenix.com/namecheap-aws-ec2-linux/), so you don't have to use some IP address to connect to your server
+
+Assuming you've gotten all that done, there's one last thing and then you're good to go! You'll want to go back into the code, and change the backendApiEndpoint to your domain. 
+
+To do this, you'll navigate into the following folder:
+```
+Project3/florida-dashboard/src/app/services
+```
+
+Here you're going to open up the file called, ```database-api.service.ts``` and here is where you'll make the modifications. Inside of the class, ```DatabaseApiService``` you'll want to find the following line:
+
+```typescript
+private backendApiEndpoint = http://127.0.0.1:3000
+```
+
+If you skipped the domain thing completely, you'll want to figure out the IP address of your EC2 instance and point the `backendApiEndpoint` to your EC2 instance. Don't forget to add Port 3000, or whatever port you've decided to open for this. 
+
+Congratulations! Now you're actually done! Give yourself a pat on the back you deserve it. If it isn't working feel free to [create an issue](https://github.com/philipgray/Project3/issues/new/choose) in our project repo and yell at me! 
