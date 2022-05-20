@@ -15,6 +15,9 @@ class TwitterScraper:
     We're using the Twitter API v2 endpoints, as you can see in the default search url below. This should (?) work with
     the v1 endpoints as well. If not, feel free to yell at me.
 
+    https://api.twitter.com/2/tweets/search/recent"
+
+
     - PG
     """
 
