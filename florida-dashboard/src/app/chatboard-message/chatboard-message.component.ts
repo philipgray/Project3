@@ -5,11 +5,17 @@ import { HttpResponse } from '@angular/common/http';
 @Component({
   selector: 'app-chatboard-message',
   template: `
+  
 	<div class="message">
 	<p>
       
       {{jsonvalues[newindex].message}}
     </p>
+	<div class="score">
+	<p>
+	{{jsonvalues[newindex].score}}
+	</p>
+	</div>
 	<div class="name">
 	<p>
 	Name: {{jsonvalues[newindex].name}} 
@@ -18,6 +24,8 @@ import { HttpResponse } from '@angular/common/http';
 	Location: {{jsonvalues[newindex].location}}
 	</p>
 	</div>
+	<button (click)="increaseScore()">Like</button>
+	<!-- <button (click)="decreaseScore()">Dislike</button> -->
 	</div>
 	
 	
@@ -33,6 +41,19 @@ export class ChatboardMessageComponent implements OnInit {
 	text: string = '';
 	jsonvalues: any;
 	newindex: number = 0;
+	
+	increaseScore(){
+		this.jsonvalues[this.index].score = parseInt(this.jsonvalues[this.index].score) + 1;
+		//window.location.reload();
+		console.log(this.jsonvalues[this.index].score);
+		fetch("https://votesrq.com/messages/updatescore?index="+this.index+"&score="+this.jsonvalues[this.index].score+"&time="+this.jsonvalues[this.index]._id);
+	}
+	decreaseScore(){
+		this.jsonvalues[this.index].score = parseInt(this.jsonvalues[this.index].score) - 1;
+		//window.location.reload();
+		console.log(this.jsonvalues[this.index].score);
+	}
+	
 	
   constructor(private database: DatabaseApiService) { 
   this.database.getMessages()

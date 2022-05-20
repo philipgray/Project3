@@ -1,5 +1,6 @@
 export interface Fakemessagedata {
 	text: string,
 	location: string,
-	name: string
+	name: string,
+	score: number
 }

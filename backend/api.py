@@ -117,9 +117,34 @@ def api_query_messages():
     inmessage = request.args.get('message')
     unixtime = time.time()
     db = client.redtideDB
-    Message = {"name": inname, "location": inlocation, "message": inmessage, "_id": unixtime}
+    Message = {"name": inname, "location": inlocation, "message": inmessage, "score": inscore, "_id": unixtime, "time": unixtime}
     db.messages.insert_one(Message)
     return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
+    
+@app.route('/messages/updatescore')
+@cross_origin()
+def api_update_messages():
+    index = request.args.get('index')
+    inscore = request.args.get('score')
+    intime = request.args.get('time')
+    db = client.redtideDB
+ 
+    intime = float(intime)
+    message_to_modify = mongo.db.messages.find_one({'time': intime})
+
+    time = message_to_modify['_id']
+    savedname = message_to_modify['name']
+    savedmessage = message_to_modify['message']
+    savedlocation = message_to_modify['location']
+    savedscore = message_to_modify['score']
+    newscore = inscore
+    
+    mongo.db.messages.delete_one({'time':  time})
+    
+    Message = {"name": savedname, "location": savedlocation, "message": savedmessage, "score": inscore, "_id": time, "time": time}
+    
+    db.messages.insert_one(Message)
+    return '''<h1>{}{}{}</h1>'''.format(index, inscore, intime)
 
 
 @app.route('/messages/post', methods=['POST'])
