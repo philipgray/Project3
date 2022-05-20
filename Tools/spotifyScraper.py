@@ -11,7 +11,7 @@ import configparser
 
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-import pprint
+import pprint3
 
 config = configparser.ConfigParser()
 config.read('../config.ini')

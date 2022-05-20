@@ -77,3 +77,21 @@ https://github.com/loonywizard/js-confetti
 
 Default imports:
 https://mindsers.blog/post/javascript-named-imports-vs-default-imports/
+
+Twitter API:
+https://developer.twitter.com/en/docs/twitter-api
+
+How to scrape ARCGIS data:
+https://stackoverflow.com/questions/50161492/how-do-i-scrape-data-from-an-arcgis-online-map
+
+Setting up NGINX, and Gunicorn to work with Flask:
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+
+Querying MongoDB:
+https://www.mongodb.com/docs/manual/tutorial/query-documents/
+
+Spotify API:
+https://developer.spotify.com/documentation/web-api/
+
+Flask Basics:
+https://flask.palletsprojects.com/en/2.1.x/
