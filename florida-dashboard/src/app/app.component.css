@@ -10,6 +10,7 @@ app-navigation-bar {
 	position: relative;
 	height: 100%;
 	margin: auto;
+	margin-top: -160px;
 	width: 95%;
 	/* //border: 0px solid #905; */
 	/* //padding: 0px; */
