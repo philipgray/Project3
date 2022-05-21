@@ -99,8 +99,9 @@ def api_historical_tweet_frequency():
 def api_all_messages():
     """
     This method is used for getting and returning all messages in our mongoDB.
-    We use find() to get the tweets, and then we use sort().
-    Sort uses the tweet id (_id) and displays it from the newest to the oldest.
+    This is the same logic as philip's tweet return code.
+    We use find() to get the messages, and then we use sort().
+    Sort uses the message id(unix time) and displays it from the newest to the oldest.
 
     - FW
     """
@@ -114,29 +115,70 @@ def api_all_messages():
 @app.route('/messages/send')
 @cross_origin()
 def api_query_messages():
+    """
+    Used for sending messages from the chatboard onto MongoDB. 
+    Takes data from the fetch request and adds that data onto the database.
+    Inputs: name, location, message, score, time, time
+    Gives most recent unix time as when the data is recieved it can be sort by time.
+    ex: ?message="Message"&location="location"
+    
+    - FW
+    """
+    
+    # values from fetch request
     inname = request.args.get('name')
     inlocation = request.args.get('location')
     inmessage = request.args.get('message')
     unixtime = time.time()
+    
     db = client.redtideDB
-    Message = {"name": inname, "location": inlocation, "message": inmessage, "_id": unixtime}
+    # creates new mongodb document
+    Message = {"name": inname, "location": inlocation, "message": inmessage, "score": inscore, "_id": unixtime, "time": unixtime}
+    
+    # adds document to "messages" collection
     db.messages.insert_one(Message)
     return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
 
-
-@app.route('/messages/post', methods=['POST'])
+@app.route('/messages/updatescore')
 @cross_origin()
-def api_post_messages():
-    inname = request.form.get('name')
-    inlocation = request.form.get('location')
-    inmessage = request.form.get('message')
-
-    unixtime = time.time()
+def api_update_messages():
+    """
+    Used for adding or subtracting a score value onto a message.
+    Takes in the time field and score field, makes a copy of the current message, deletes it, replaces it with an identical message with updated score field.
+    Saves all of the variables in the message before it is deleted to append to the replacement messsage.
+    
+    -FW
+    """
+    
+    # data from fetch request
+    index = request.args.get('index')
+    inscore = request.args.get('score')
+    intime = request.args.get('time')
     db = client.redtideDB
-    Message = {"name": inname, "location": inlocation, "message": inmessage, "time": unixtime}
+    
+    # converts time into float
+    intime = float(intime)
+    
+    # gets message that has that specific time value
+    message_to_modify = mongo.db.messages.find_one({'time': intime})
+    
+    # saves values from message about to be deleted
+    time = message_to_modify['_id']
+    savedname = message_to_modify['name']
+    savedmessage = message_to_modify['message']
+    savedlocation = message_to_modify['location']
+    savedscore = message_to_modify['score']
+    newscore = inscore
+    
+    # deletes the message
+    mongo.db.messages.delete_one({'time':  time})
+    
+    # replacement message with updated score field
+    Message = {"name": savedname, "location": savedlocation, "message": savedmessage, "score": inscore, "_id": time, "time": time}
+    
+    # adds the replacement message
     db.messages.insert_one(Message)
-    return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
-
+    return '''<h1>{}{}{}</h1>'''.format(index, inscore, intime)
 
 @app.route('/api/v1/redtide/youtube', methods=['GET'])
 @cross_origin()
