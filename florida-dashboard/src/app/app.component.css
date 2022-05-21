@@ -4,7 +4,6 @@ app-navigation-bar {
   position: sticky;
 }
 
-
 .container {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	z-index: 2;
@@ -74,7 +73,7 @@ app-navigation-bar {
 }
 
 .title {
-	bottom: -45px;
+	bottom: 0px;
 	margin: auto;
 	position: relative;
 	width: 80%;
