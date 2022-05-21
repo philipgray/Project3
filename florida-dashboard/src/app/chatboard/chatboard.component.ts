@@ -98,6 +98,7 @@ export class ChatboardComponent implements OnInit {
 	getValues()
 	Executes when the "Send" button is clicked.
 	Takes input from the textboxes: text, location, and string and sends them over to the flask server.
+	Each textbox has a value after a # ex: #name. This declares the name of the value in the textbox.
 	Takes the default score value of '0' and sends that as well.
 	On button click, before refreshing the page, it creates a "fake message" which is not data from the backend but data from the user.
 	It uses this fake message to make the chatboard seem more instant as it will instantly put up data that is typed in before refreshing the page.

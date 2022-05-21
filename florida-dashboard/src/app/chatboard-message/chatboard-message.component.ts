@@ -5,8 +5,11 @@ import { HttpResponse } from '@angular/common/http';
 Chatboard Message Component!
 Displays messages from the database given a specific index!
 Allows to "Like" a message.
+Input: index,
+When this component is created it is given an index value.
+The index valu represents from the top how many messages down this component will display.
+If the index value is 5, it will display the 6th message from the top.
 Index[0] is the most recent message. Index[9] is the 10th most recent message.
-Input: index
 
 @author Ferris Whitney
 */
@@ -52,13 +55,16 @@ export class ChatboardMessageComponent implements OnInit {
 	
 	/*
 	IncreaseScore method.
-	When the "Like" button is pressed, it takes the current score and adds "1."
+	When the "Like" button is pressed, it takes the current score from jsonvalues and adds "1."
+	Jsonvalues = all messages saved onto the backend saved as json.
 	It then sends that +1 score value over to the flask backend using a fetch request.
 	It sends the _id value (time) of the message that was liked and the new score value.
 	*/
 	increaseScore(){
-		this.jsonvalues[this.index].score = parseInt(this.jsonvalues[this.index].score) + 1;
+		this.jsonvalues[this.index].score = parseInt(this.jsonvalues[this.index].score) + 1; // Sets the score value in jsonvalues to itself + 1.
 		console.log(this.jsonvalues[this.index].score);
+		
+		// Sends fetch request to the backend containing the new score values, index, and time.
 		fetch("https://votesrq.com/messages/updatescore?index="+this.index+"&score="+this.jsonvalues[this.index].score+"&time="+this.jsonvalues[this.index]._id);
 	}
 	
@@ -77,6 +83,7 @@ export class ChatboardMessageComponent implements OnInit {
 	/*
 	Gets all messages from the database when this component is created.
 	Saves all messages from flask in json format into the jsonvalues variable.
+	Jsonvalues then becomes all messages that are saved onto the backend.
 	*/
 	constructor(private database: DatabaseApiService) { 
 	this.database.getMessages()
