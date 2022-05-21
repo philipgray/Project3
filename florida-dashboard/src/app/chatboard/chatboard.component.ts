@@ -12,6 +12,8 @@ The "Like" functionality is in the chatboard-message component.
 message-container: Scrollable container of messages. Home to the chatboard-message components.
 textboxes: Home to the textboxes. Used for inputs so on button press, the values will send.
 app-chatboard-message: Chatboard message component. Handles getting data from flask server using database-api.
+
+@author Ferris Whitney
 */
 @Component({
   selector: 'app-chatboard',

@@ -7,6 +7,8 @@ Displays messages from the database given a specific index!
 Allows to "Like" a message.
 Index[0] is the most recent message. Index[9] is the 10th most recent message.
 Input: index
+
+@author Ferris Whitney
 */
 @Component({
   selector: 'app-chatboard-message',

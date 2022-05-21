@@ -123,7 +123,11 @@ export class DatabaseApiService {
       }
     });
   }
-
+  
+  /*
+  Retrieves all messages from the flask backend.
+  @return All messages from backend sorted by time.
+  */
   getMessages(): Promise<any>{
     return fetch(this.backendApiEndpoint + '/messages/all', {
       method: 'GET',
