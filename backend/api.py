@@ -129,8 +129,8 @@ def api_query_messages():
     inname = request.args.get('name')
     inlocation = request.args.get('location')
     inmessage = request.args.get('message')
+    inscore = request.args.get('score')
     unixtime = time.time()
-    
     db = client.redtideDB
     # creates new mongodb document
     Message = {"name": inname, "location": inlocation, "message": inmessage, "score": inscore, "_id": unixtime, "time": unixtime}
@@ -138,6 +138,7 @@ def api_query_messages():
     # adds document to "messages" collection
     db.messages.insert_one(Message)
     return '''<h1>{}{}{}</h1>'''.format(inname, inlocation, inmessage)
+    
 
 @app.route('/messages/updatescore')
 @cross_origin()
@@ -158,10 +159,12 @@ def api_update_messages():
     
     # converts time into float
     intime = float(intime)
-    
+    print(intime)
+    print(intime)
+    print(intime)
     # gets message that has that specific time value
     message_to_modify = mongo.db.messages.find_one({'time': intime})
-    
+    print(message_to_modify)
     # saves values from message about to be deleted
     time = message_to_modify['_id']
     savedname = message_to_modify['name']
