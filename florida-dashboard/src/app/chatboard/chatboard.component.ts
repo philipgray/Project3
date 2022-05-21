@@ -13,12 +13,6 @@ message-container: Scrollable container of messages. Home to the chatboard-messa
 textboxes: Home to the textboxes. Used for inputs so on button press, the values will send.
 app-chatboard-message: Chatboard message component. Handles getting data from flask server using database-api.
 
-Resource used:
-https://www.w3schools.com/css/default.asp
-https://www.digitalocean.com/community/tutorials/processing-incoming-request-data-in-flask
-https://doc.fireflymigration.com/ngfor.html
-https://stackoverflow.com/questions/25152463/how-to-use-typescript-on-a-button-click
-
 @author Ferris Whitney
 */
 @Component({

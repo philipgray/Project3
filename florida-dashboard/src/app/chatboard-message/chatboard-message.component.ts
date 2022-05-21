@@ -11,12 +11,6 @@ The index valu represents from the top how many messages down this component wil
 If the index value is 5, it will display the 6th message from the top.
 Index[0] is the most recent message. Index[9] is the 10th most recent message.
 
-Resource used:
-https://www.w3schools.com/css/default.asp
-https://www.digitalocean.com/community/tutorials/processing-incoming-request-data-in-flask
-https://doc.fireflymigration.com/ngfor.html
-https://stackoverflow.com/questions/25152463/how-to-use-typescript-on-a-button-click
-
 @author Ferris Whitney
 */
 @Component({
